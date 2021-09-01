@@ -1,5 +1,5 @@
 /*!
-Theme Name: underscore
+Theme Name: captcha-theme
 Theme URI: http://underscores.me/
 Author: Abinassh
 Author URI: http://underscores.me/
@@ -100,3 +100,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+/* Local/accueil
+--------------------------------------------- */
+@import "local/accueil";
