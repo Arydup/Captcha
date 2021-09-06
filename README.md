@@ -21,4 +21,4 @@
 - `git push origin nomDeLaBranche` (origin se nomme comme vous l'avez appelé)
 
 ### Lorsque vous avez terminé avec le push, allez faire une pull request sur gitHub.
-##Lorsque la pull request est merge, supprimez votre branche 
+## Lorsque la pull request est merge, supprimez votre branche 
