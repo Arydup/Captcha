@@ -21,3 +21,6 @@ body.home::after{
     }
    z-index: -1;
 }
+.wp-block-search .wp-block-search__input{
+    flex-grow: 0.1;
+}
