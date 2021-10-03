@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+}
 body.home {
     background-color : fff;
     background-color: lightblue;
@@ -23,4 +27,9 @@ body.home::after{
 }
 .wp-block-search .wp-block-search__input{
     flex-grow: 0.1;
+    
 }
+.site{
+    //margin: 20px;
+}
+
