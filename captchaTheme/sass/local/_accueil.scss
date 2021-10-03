@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+}
 body.home {
     background-color : fff;
     background-color: lightblue;
@@ -26,7 +30,7 @@ body.home::after{
     
 }
 .site{
-    margin: 20px;
+    //margin: 20px;
 }
 .pied{
     display: grid;
@@ -37,3 +41,4 @@ body.home::after{
     background-color: rgb(0, 0, 54);
     color: white;
 }
+
