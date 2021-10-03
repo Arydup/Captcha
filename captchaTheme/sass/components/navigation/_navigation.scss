@@ -1,12 +1,35 @@
 .main-navigation {
 	display: block;
 	width: 100%;
+	margin: 0 auto;
 
 	ul {
-		display: none;
+		text-align: center;
+		display: flex;
+		font-size: 1em;
+
+		justify-content: flex-start;
+		align-items: center;
+		background-color: #333;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		overflow-x: auto;
+		white-space: nowrap;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+
+		&::-webkit-scrollbar{
+			//display: flex;
+			background-color: #666;
+			height: 7px;
+			//position: absolute;
+			//display: none;
+		}
+		&::-webkit-scrollbar-thumb{
+			//max-height: 10px;
+			background-color: rgba(0, 0, 0, 0.2);
+			-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07); }
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -22,7 +45,7 @@
 			}
 
 			li {
-
+				padding: 14px;
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
@@ -32,6 +55,7 @@
 
 			a {
 				width: 200px;
+				text-decoration: none;
 			}
 
 			:hover > a,
@@ -51,6 +75,10 @@
 
 	li {
 		position: relative;
+		display: inline-block;
+		padding: 14px;
+		padding: 10px 5% ;
+		text-decoration: none;
 
 		&:hover > a,
 		&.focus > a {
@@ -60,6 +88,7 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: white;
 	}
 
 	.current_page_item > a,
@@ -69,21 +98,17 @@
 	}
 }
 
+
 /* Small menu. */
-.menu-toggle,
+/*.menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-}
+}*/
 
-@media screen and (min-width: 37.5em) {
+/*@media screen and (min-width: 37.5em) {*/
 
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
+.menu-toggle {
+	display: none;
 }
 
 .comment-navigation,

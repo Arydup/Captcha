@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+}
 body.home {
     background-color : fff;
     background-color: lightblue;
@@ -26,5 +30,5 @@ body.home::after{
     
 }
 .site{
-    margin: 20px;
+    //margin: 20px;
 }
