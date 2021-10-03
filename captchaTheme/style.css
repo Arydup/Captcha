@@ -643,6 +643,9 @@ textarea {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-x: auto;
   white-space: nowrap;
+
+}
+
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -671,6 +674,7 @@ textarea {
   left: -999em;
   top: 0;
 }
+
 
 .main-navigation ul ul li {
   padding: 14px;
@@ -962,11 +966,11 @@ textarea {
 
 /* Local/accueil
 --------------------------------------------- */
+
 * {
   box-sizing: border-box;
   user-select: none;
 }
-
 body.home {
   background-color: fff;
   background-color: lightblue;
