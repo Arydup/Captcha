@@ -10,7 +10,7 @@
 
 		justify-content: flex-start;
 		align-items: center;
-		background-color: #333;
+		background-color: $color__nav;
 		-webkit-overflow-scrolling: touch;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
 		overflow-x: auto;
@@ -21,14 +21,14 @@
 
 		&::-webkit-scrollbar{
 			//display: flex;
-			background-color: #666;
+			background-color: $color__nav-scrollbar;
 			height: 7px;
 			//position: absolute;
 			//display: none;
 		}
 		&::-webkit-scrollbar-thumb{
 			//max-height: 10px;
-			background-color: rgba(0, 0, 0, 0.2);
+			background-color: $color__nav-scrollbar-thumb;
 			-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07); }
 
 		ul {
@@ -88,7 +88,7 @@
 	a {
 		display: block;
 		text-decoration: none;
-		color: white;
+		color: $color__nav-link;
 	}
 
 	.current_page_item > a,

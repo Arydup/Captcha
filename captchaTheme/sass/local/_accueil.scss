@@ -4,7 +4,7 @@
 }
 body.home {
     background-color : fff;
-    background-color: lightblue;
+    background-color: $color__accueil-fond;
     height : 500vh;
     width : 100vw;
     overflow-x :hidden;
@@ -38,7 +38,7 @@ body.home::after{
     grid-template-columns: 0.05fr 1fr;
 }
 .site-footer{
-    background-color: rgb(0, 0, 54);
-    color: white;
+    background-color: $color__footer-fond;
+    color: $color__footer-texte;
 }
 
