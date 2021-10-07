@@ -8,7 +8,7 @@
 4. Dans la console :
  - `git init`
  - `git branch -M main`
- - `git remote add origin main` (origin peut s'appeler comme vous le souhaitez)
+ - `git remote add origin https://github.com/Arydup/Captcha` (origin peut s'appeler comme vous le souhaitez)
 
 ### À chaque fois que vous voulez faire des changements, vous devez créer une branche. Pour créer une branche :
 - `git pull origin main` (origin se nomme comme vous l'avez appelé)
