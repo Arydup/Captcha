@@ -43,6 +43,7 @@
 				?>
 				<p class="site-description"><?php echo $under_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
+			<span class="modeJourNuit"><i class="fas fa-moon"></i>/<i class="fas fa-sun"></i></span>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

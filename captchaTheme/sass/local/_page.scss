@@ -1,0 +1,34 @@
+.wp-block-search .wp-block-search__input{
+    flex-grow: 0.1;
+    
+}
+.site{
+    //margin: 20px;
+}
+.pied{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.05fr 1fr;
+}
+.site-footer{
+    background-color: $color__footer-fond;
+    color: $color__footer-texte;
+}
+
+.custom-logo{
+    width: 60px;
+    height: auto;
+    margin: 10px;
+}
+.custom-logo-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.site-branding{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, $color__nav, $color__header-fond 30%) bottom;
+}
