@@ -4,6 +4,7 @@
 	margin: 0 auto;
 
 	ul {
+		font-family: 'Concert One', cursive;
 		text-align: center;
 		display: flex;
 		font-size: 1em;
@@ -89,12 +90,19 @@
 		display: block;
 		text-decoration: none;
 		color: $color__nav-link;
+		
 	}
+	a:hover {
+		color: $color__nav-link-hover;
+		text-shadow: 2px 1px 0px $color__nav-link-hover-shadow;
+	}
+
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: $color__page_active;
 	}
 }
 
@@ -131,4 +139,10 @@
 		text-align: end;
 		flex: 1 0 50%;
 	}
+}
+
+.modeJourNuit{
+	background-color: $color__modeJourNuit-fond;
+	padding: 0px 2px;
+	border-radius: 25px;
 }

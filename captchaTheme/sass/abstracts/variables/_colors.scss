@@ -19,18 +19,27 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
-/* Les couleurs de la navigation */
-$color__nav : #666;
-$color__nav-scrollbar : #777;
+/* Les couleurs de la navigation*/
+$color__nav : rgb(230, 163, 207);
+$color__nav-scrollbar : rgb(252, 213, 235);
 $color__nav-scrollbar-thumb : rgba(0, 0, 0, 0.2);
-$color__nav-link : white;
+$color__nav-link : rgb(161, 24, 81);
+$color__nav-link-hover : rgb(206, 223, 241);
+$color__nav-link-hover-shadow : rgba(0, 0, 0, 0.3);
+$color__page_active : rgb(235, 226, 226);
+
+/* Les couleurs du header*/
+$color__header-fond : rgb(130, 131, 226);
+$color__modeJourNuit-fond : rgb(157, 226, 130);
 
 /* Les couleurs du footer */
 $color__footer-texte : white;
 $color__footer-fond : rgb(0, 0, 54);
 
 /* Les couleurs de la page d'accueil */
-$color__accueil-fond : lightblue;
+$color__accueil-fond : #E8F0FF;
+
+
 
 
 

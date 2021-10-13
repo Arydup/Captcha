@@ -31,14 +31,15 @@
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'under' ) ); ?>">
 			<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'under' ), 'WordPress' );
+				//printf( esc_html__( 'Proudly powered by %s', 'under' ), 'WordPress' );
 				?>
 		</a>
-		<span class="sep"> | </span>
+		<!--<span class="sep"> | </span>-->
 		<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'under' ), 'under', '<a href="http://underscores.me/">Abinassh</a>' );
+				//printf( esc_html__( 'Theme: %1$s by %2$s.', 'under' ), 'under', '<a href="http://underscores.me/">Abinassh</a>' );
 				?>
+		<p>Un thème de : <span class="nomAuteurs">Aryane Duperron, Stéphanie Plante, Abinassh Kanesh et Cyrile Tanguay</span></p>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
