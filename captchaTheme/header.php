@@ -10,8 +10,10 @@
  */
 
 ?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +45,13 @@
 				?>
 				<p class="site-description"><?php echo $under_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
-			<span class="modeJourNuit"><i class="fas fa-moon"></i>/<i class="fas fa-sun"></i></span>
+
+			<!--Le toggle du mode sombre-->
+			<label class="modeSombre">
+				<input id="modeSombre" class="modeSombre-checkbox" type="checkbox" onclick="darkmode.toggle();">
+				<!--<php? if(darkmode.toogle){#modeSombre.checked}>-->
+				<div class="modeSombreToggle"></div>
+			</label>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
@@ -58,3 +66,7 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<!--Librairie JS pour le darkmode-->
+	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+	<script>const darkmode = new Darkmode();</script>
