@@ -37,20 +37,5 @@ body.home {
     margin : 0px;
 }
 
-.wp-block-search .wp-block-search__input{
-    flex-grow: 0.1;
-    
-}
-.site{
-    //margin: 20px;
-}
-.pied{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-columns: 0.05fr 1fr;
-}
-.site-footer{
-    background-color: $color__footer-fond;
-    color: $color__footer-texte;
-}
+
 

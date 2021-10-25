@@ -759,9 +759,68 @@ textarea {
 }
 
 .modeJourNuit {
-  background-color: #9de282;
+  background-color: #140e35;
   padding: 0px 2px;
   border-radius: 25px;
+}
+
+/*Le toggle du mode sombre*/
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.modeSombre-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.modeSombreToggle {
+  display: inline-block;
+  background: #e2dfdf;
+  border-radius: 16px;
+  width: 48px;
+  height: 22px;
+  position: relative;
+  vertical-align: middle;
+  top: -2px;
+}
+
+.modeSombreToggle::before {
+  /*L'icone du soleil*/
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f185";
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeccdc;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.25s;
+}
+
+.modeSombre {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.modeSombre-checkbox:checked + .modeSombreToggle {
+  background: #4c4b52;
+}
+
+.modeSombre-checkbox:checked + .modeSombreToggle:before {
+  left: 28px;
+  content: "\f186";
+  font-size: 0.7rem;
+  color: #9d94a0;
 }
 
 /* Posts and pages
@@ -1024,21 +1083,6 @@ body.home {
   margin: 0px;
 }
 
-.wp-block-search .wp-block-search__input {
-  flex-grow: 0.1;
-}
-
-.pied {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-columns: 0.05fr 1fr;
-}
-
-.site-footer {
-  background-color: #000036;
-  color: white;
-}
-
 /* Local/pages
 --------------------------------------------- */
 .wp-block-search .wp-block-search__input {
@@ -1052,8 +1096,15 @@ body.home {
 }
 
 .site-footer {
-  background-color: #000036;
-  color: white;
+  background-color: #272769;
+  color: #e9e9e9;
+}
+
+/*Les couleurs du darkMode du footer*/
+.darkmode--activated .site-footer {
+  mix-blend-mode: difference;
+  background-color: white;
+  color: red;
 }
 
 .custom-logo {

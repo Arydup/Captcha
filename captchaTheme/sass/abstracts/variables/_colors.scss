@@ -28,16 +28,31 @@ $color__nav-link-hover : rgb(206, 223, 241);
 $color__nav-link-hover-shadow : rgba(0, 0, 0, 0.3);
 $color__page_active : rgb(235, 226, 226);
 
+$color__nav_nuit : rgb(94, 27, 70);
+$color__nav-scrollbar_nuit : rgb(148, 124, 138);
+$color__nav-scrollbar-thumb_nuit : rgba(0, 0, 0, 0.2);
+$color__nav-link_nuit : rgb(196, 147, 167);
+$color__nav-link-hover_nuit : rgb(66, 96, 129);
+$color__nav-link-hover-shadow_nuit : rgba(0, 0, 0, 0.3);
+$color__page_active_nuit : rgb(94, 85, 85);
+
 /* Les couleurs du header*/
 $color__header-fond : rgb(130, 131, 226);
-$color__modeJourNuit-fond : rgb(157, 226, 130);
+$color__modeJourNuit-fond : rgb(20, 14, 53);
 
+$color__header-fond_nuit : rgb(41, 41, 68);
+$color__modeJourNuit-fond_nuit : rgb(103, 129, 93);
 /* Les couleurs du footer */
-$color__footer-texte : white;
-$color__footer-fond : rgb(0, 0, 54);
+$color__footer-texte : rgb(233, 233, 233);
+$color__footer-fond : rgb(39, 39, 105);
+
+$color__footer-texte_nuit : rgb(255, 0, 0);
+$color__footer-fond_nuit : rgb(255, 255, 255);
 
 /* Les couleurs de la page d'accueil */
 $color__accueil-fond : #E8F0FF;
+
+$color__accueil-fond_nuit : #383e49;
 
 
 
