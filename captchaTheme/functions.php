@@ -178,3 +178,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/*
+function extraire_article_accueil($query) {
+    if(  !is_admin() && $query->is_front_page() && $query->is_main_query() ) {
+        $query->set('category_name','accueil');
+        $query->set('meta_key', 'ordre');
+        $query->set('orderby', array('meta_value' => "ASC"));
+        $query->set('post_per_page', -1);
+    }  
+}
+add_action( "pre_get_posts", "extraire_article_accueil" );
+*/
