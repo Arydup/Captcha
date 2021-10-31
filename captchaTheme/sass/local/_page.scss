@@ -8,7 +8,12 @@
    // background-color: $color__fond;
 }
 
+main{
+    margin:0 10px;
+}
+=======
 /* Les éléments du pied de page */
+
 .pied{
     display: grid;
     grid-template-columns: 1fr 1fr;

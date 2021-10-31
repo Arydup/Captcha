@@ -1134,6 +1134,11 @@ body.home {
   flex-grow: 0.1;
 }
 
+main {
+  margin: 0 10px;
+}
+
+=======
 /* Les éléments du body */
 /* Les éléments du pied de page */
 .pied {
