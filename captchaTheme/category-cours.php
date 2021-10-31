@@ -19,18 +19,29 @@ get_header();
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
+			<nav class='session'>
+				<a href="#">Session 1</a>
+				<a href="#">Session 2</a>
+				<a href="#">Session 3</a>
+				<a href="#">Session 4</a>
+				<a href="#">Session 5</a>
+				<a href="#">Session 6</a>
+			</nav>
+			<nav class='session'>
+				<a href="#">1M1</a>
+				<a href="#">1M2</a>
+				<a href="#">1W1</a>
+				<a href="#">1J1</a>
+			</nav>
 			</header><!-- .page-header -->
 
 			
 			<?php
 
-			
-			global $chaine_titre;
-			$chaine_titre = "";
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				$chaine_titre.= get_the_title() . " _ ";
+				
 				
 
 				/*
@@ -38,19 +49,9 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				//get_template_part( 'template-parts/content', 'formation' );
+			get_template_part( 'template-parts/content', 'cours' );
 
 			endwhile;
-			//echo "-------------------------- <br>";
-			echo $chaine_titre;
-			echo "-------------------------- <br>";
-			
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>

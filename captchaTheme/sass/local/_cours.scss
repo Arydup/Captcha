@@ -1,0 +1,18 @@
+.cours {
+    line-height: 2em;
+    display: flex;
+    border: 1px solid #aaa;
+}
+.cours img {
+    margin: 10px;
+    height: 200px;
+}
+.session{
+    display: flex;
+    justify-content: center;
+}
+.session a{
+    display: block;
+    padding: 5px 15px;
+}
+  
