@@ -11,6 +11,7 @@ body.home {
     overflow-x :hidden;
     margin: 0;
 }
+
 .home .entry-title{
     display: none;
 }
@@ -35,6 +36,13 @@ body.home {
 
 .wp-block-image{
     margin : 0px;
+}
+
+.darkmode--activated{
+    & body.home{
+        mix-blend-mode: color;
+        background-color: $color__accueil-fond_nuit;
+    }
 }
 
 

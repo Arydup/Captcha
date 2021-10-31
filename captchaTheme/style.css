@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: captcha-theme
 Theme URI: http://underscores.me/
@@ -49,11 +50,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 /* Les couleurs de la navigation*/
-/* Les couleurs du header*/
+/* Les couleurs de la navigation mode nuit */
+/* Les couleurs du header */
+/* Les couleurs de fond du site */
 /* Les couleurs du footer */
 /* Les couleurs de la page d'accueil */
 /*Importation de la typographie Concert one de google font*/
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Lobster+Two&display=swap");
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -640,10 +645,10 @@ textarea {
   font-family: 'Concert One', cursive;
   text-align: center;
   display: flex;
-  font-size: 1em;
+  font-size: 1.3em;
   justify-content: flex-start;
   align-items: center;
-  background-color: #e6a3cf;
+  background-color: #efbfff;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-x: auto;
@@ -708,19 +713,19 @@ textarea {
 .main-navigation a {
   display: block;
   text-decoration: none;
-  color: #a11851;
+  color: black;
 }
 
 .main-navigation a:hover {
-  color: #cedff1;
-  text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.3);
+  color: #a2a3a7;
+  text-shadow: 2px 1px 0px rgba(167, 210, 221, 0.1);
 }
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-  color: #ebe2e2;
+  color: white;
 }
 
 /* Small menu. */
@@ -821,6 +826,41 @@ input[type="checkbox"], input[type="radio"] {
   content: "\f186";
   font-size: 0.7rem;
   color: #9d94a0;
+}
+
+/*Les couleurs du darkMode*/
+.darkmode--activated .main-navigation ul {
+  mix-blend-mode: difference;
+  background-color: #93779c;
+}
+
+.darkmode--activated .main-navigation ul::-webkit-scrollbar {
+  mix-blend-mode: difference;
+  background-color: #ffd4ec;
+}
+
+.darkmode--activated .main-navigation ul::-webkit-scrollbar-thumb {
+  mix-blend-mode: difference;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.darkmode--activated .main-navigation a {
+  mix-blend-mode: lighten;
+  color: #b4cdff;
+}
+
+.darkmode--activated .main-navigation a:hover {
+  mix-blend-mode: difference;
+  color: #e9cdfb;
+  text-shadow: 2px 1px 0px rgba(107, 231, 253, 0.144);
+}
+
+.darkmode--activated .main-navigation .current_page_item > a,
+.darkmode--activated .main-navigation .current-menu-item > a,
+.darkmode--activated .main-navigation .current_page_ancestor > a,
+.darkmode--activated .main-navigation .current-menu-ancestor > a {
+  mix-blend-mode: darken;
+  color: black;
 }
 
 /* Posts and pages
@@ -1083,6 +1123,11 @@ body.home {
   margin: 0px;
 }
 
+.darkmode--activated body.home {
+  mix-blend-mode: color;
+  background-color: #383e49;
+}
+
 /* Local/pages
 --------------------------------------------- */
 .wp-block-search .wp-block-search__input {
@@ -1093,6 +1138,9 @@ main {
   margin: 0 10px;
 }
 
+=======
+/* Les éléments du body */
+/* Les éléments du pied de page */
 .pied {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1100,15 +1148,21 @@ main {
 }
 
 .site-footer {
-  background-color: #272769;
-  color: #e9e9e9;
+  background-color: #b4cdff;
+  color: black;
+  font-family: 'Asap', sans-serif;
 }
 
 /*Les couleurs du darkMode du footer*/
 .darkmode--activated .site-footer {
   mix-blend-mode: difference;
-  background-color: white;
-  color: red;
+  background-color: #586a8f;
+  color: #b4cdff;
+}
+
+.darkmode--activated .site-branding {
+  mix-blend-mode: difference;
+  background: linear-gradient(0deg, #93779c, #586a8f 30%) bottom;
 }
 
 .custom-logo {
@@ -1128,7 +1182,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(0deg, #e6a3cf, #8283e2 30%) bottom;
+  background: linear-gradient(0deg, #efbfff, #b4cdff 30%) bottom;
 }
 
 /* Local/cours

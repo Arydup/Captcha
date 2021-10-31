@@ -7,7 +7,7 @@
 		font-family: 'Concert One', cursive;
 		text-align: center;
 		display: flex;
-		font-size: 1em;
+		font-size: 1.3em;
 
 		justify-content: flex-start;
 		align-items: center;
@@ -201,4 +201,38 @@ input[type="checkbox"], input[type="radio"] {
 	content: "\f186";
 	font-size: 0.7rem;
 	color: rgb(157, 148, 160);
+}
+/*Les couleurs du darkMode*/
+
+.darkmode--activated{
+    & .main-navigation{ 	
+		& ul{
+			mix-blend-mode:difference;
+			background-color: $color__nav_nuit;
+			&::-webkit-scrollbar{
+        		mix-blend-mode:difference;
+				background-color: $color__nav-scrollbar_nuit;        
+			}
+			&::-webkit-scrollbar-thumb{
+				mix-blend-mode:difference;
+				background-color: $color__nav-scrollbar-thumb_nuit;        
+			}			
+    	}
+		& a{
+			mix-blend-mode:lighten;
+			color: $color__nav-link_nuit;			
+		}
+		& a:hover{
+			mix-blend-mode:difference;
+			color: $color__nav-link-hover_nuit;
+			text-shadow: 2px 1px 0px $color__nav-link-hover-shadow_nuit;
+		}
+		& .current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+			mix-blend-mode:darken;
+			color: $color__page_active_nuit;
+		}
+	}
 }

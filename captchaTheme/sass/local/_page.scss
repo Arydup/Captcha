@@ -1,13 +1,19 @@
 .wp-block-search .wp-block-search__input{
     flex-grow: 0.1; 
 }
+
+/* Les éléments du body */
 .site{
     //margin: 20px;
+   // background-color: $color__fond;
 }
 
 main{
     margin:0 10px;
 }
+=======
+/* Les éléments du pied de page */
+
 .pied{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -16,6 +22,7 @@ main{
 .site-footer{
     background-color: $color__footer-fond;
     color: $color__footer-texte;
+    font-family: 'Asap', sans-serif;
 }
 /*Les couleurs du darkMode du footer*/
 .darkmode--activated{
@@ -23,6 +30,11 @@ main{
         mix-blend-mode: difference;
         background-color: $color__footer-fond_nuit;
         color: $color__footer-texte_nuit;
+    }
+
+    & .site-branding{
+        mix-blend-mode: difference;
+        background: linear-gradient(0deg, $color__nav_nuit, $color__header-fond_nuit 30%) bottom;
     }
 }
 .piedPageLogo{
