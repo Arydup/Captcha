@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<p> </p>' );
-		$chaine_titre.= get_the_title(); 
+		//$chaine_titre.= get_the_title(); 
 		//echo $chaine_titre;
 		?>
 	</header><!-- .entry-header -->
