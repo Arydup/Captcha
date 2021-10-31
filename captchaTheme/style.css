@@ -1089,6 +1089,10 @@ body.home {
   flex-grow: 0.1;
 }
 
+main {
+  margin: 0 10px;
+}
+
 .pied {
   display: grid;
   grid-template-columns: 1fr 1fr;
