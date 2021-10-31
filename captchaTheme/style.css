@@ -1126,4 +1126,27 @@ body.home {
   justify-content: center;
   background: linear-gradient(0deg, #e6a3cf, #8283e2 30%) bottom;
 }
+
+/* Local/cours
+--------------------------------------------- */
+.cours {
+  line-height: 2em;
+  display: flex;
+  border: 1px solid #aaa;
+}
+
+.cours img {
+  margin: 10px;
+  height: 200px;
+}
+
+.session {
+  display: flex;
+  justify-content: center;
+}
+
+.session a {
+  display: block;
+  padding: 5px 15px;
+}
 /*# sourceMappingURL=style.css.map */

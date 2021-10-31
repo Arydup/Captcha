@@ -189,3 +189,12 @@ function extraire_article_accueil($query) {
 }
 add_action( "pre_get_posts", "extraire_article_accueil" );
 */
+function extraire_article_cours($query) {
+    if(  !is_admin() && $query->is_category('7') && $query->is_main_query() ) {
+        //$query->set('meta_key', 'ordre');
+        //$query->set('orderby', array('meta_value' => "ASC"));
+		$query->set('orderby', array('title' => "ASC"));
+        $query->set('post_per_page', -1);
+    }  
+}
+add_action( "pre_get_posts", "extraire_article_cours" );
