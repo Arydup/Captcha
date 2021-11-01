@@ -1,18 +1,66 @@
-.wp-block-search .wp-block-search__input{
-    flex-grow: 0.1; 
+/*******************************************************************************
+ * _accueil.scss
+ * Modification de la page de pré-accueil
+ ******************************************************************************/
+
+/* -----------------------------------------------------------------------------
+Sélecteurs principaux
+----------------------------------------------------------------------------- */
+body{
+   background-image:url('../images/backgrounds/bg4.png');
+   background-image: url("http://localhost/captcha/wordpress/wp-admin/upload.php?item=67");
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
 }
 
-/* Les éléments du body */
-.site{
-    //margin: 20px;
-   // background-color: $color__fond;
+.site-main{
+    position: relative;
+    height: 65vh;
+
 }
 
-main{
-    margin:0 10px;
+h1{
+    margin: 0em;
 }
-=======
-/* Les éléments du pied de page */
+
+
+/* -----------------------------------------------------------------------------
+Sélecteurs pour les images et logo
+----------------------------------------------------------------------------- */
+.imgFond{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-logo{
+    width: 60px;
+    height: auto;
+    margin: 10px;
+}
+
+.custom-logo-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-branding{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, $color__nav, $color__header-fond 30%) bottom;
+}
+
+/* -----------------------------------------------------------------------------
+Les éléments du pied de page
+----------------------------------------------------------------------------- */
 
 .pied{
     display: grid;
@@ -24,7 +72,10 @@ main{
     color: $color__footer-texte;
     font-family: 'Asap', sans-serif;
 }
-/*Les couleurs du darkMode du footer*/
+
+/* -----------------------------------------------------------------------------
+Les couleurs du mode sombre du footer
+----------------------------------------------------------------------------- */
 .darkmode--activated{
     & .site-footer{
         mix-blend-mode: difference;
@@ -36,25 +87,4 @@ main{
         mix-blend-mode: difference;
         background: linear-gradient(0deg, $color__nav_nuit, $color__header-fond_nuit 30%) bottom;
     }
-}
-.piedPageLogo{
-    //background-image: url("images/logoTIM.jpg");
-}
-
-.custom-logo{
-    width: 60px;
-    height: auto;
-    margin: 10px;
-}
-.custom-logo-link{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.site-branding{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(0deg, $color__nav, $color__header-fond 30%) bottom;
 }

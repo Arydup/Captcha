@@ -1,3 +1,7 @@
+/*******************************************************************************
+ * _accueil.scss
+ * Modification de la page de pré-accueil
+ ******************************************************************************/
 *{
     box-sizing: border-box;
     user-select: none;
@@ -5,11 +9,18 @@
     padding: 0;
 }
 
+/* -----------------------------------------------------------------------------
+Sélecteurs principaux
+----------------------------------------------------------------------------- */
 body.home {
     background-color: $color__accueil-fond;
     width : 100vw;
     overflow-x :hidden;
     margin: 0;
+}
+
+.home header{
+    display: none;
 }
 
 .home .entry-title{
@@ -20,15 +31,14 @@ body.home {
     display: none;
 }
 
-.home header{
-    display: none;
-}
-
+/* -----------------------------------------------------------------------------
+Sélecteurs pour la modification des images
+----------------------------------------------------------------------------- */
 .home figure{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     margin: none;
    
@@ -38,6 +48,9 @@ body.home {
     margin : 0px;
 }
 
+/* -----------------------------------------------------------------------------
+Sélecteurs pour le mode sombre
+----------------------------------------------------------------------------- */
 .darkmode--activated{
     & body.home{
         mix-blend-mode: color;
