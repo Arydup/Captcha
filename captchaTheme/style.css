@@ -1123,6 +1123,7 @@ Sélecteurs pour le mode sombre
 
 /* Local/pages
 --------------------------------------------- */
+
 /*******************************************************************************
  * _accueil.scss
  * Modification de la page de pré-accueil
@@ -1136,6 +1137,13 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
+
+/* Les éléments du body */
+/* Les éléments du pied de page */
+.pied {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.05fr 1fr;
 }
 
 .site-main {
