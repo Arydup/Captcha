@@ -413,10 +413,6 @@ h6 {
   clear: both;
 }
 
-p {
-  margin-bottom: 1.5em;
-}
-
 dfn,
 cite,
 em,
@@ -515,10 +511,6 @@ object {
 img {
   height: auto;
   max-width: 100%;
-}
-
-figure {
-  margin: 1em 0;
 }
 
 table {
@@ -869,24 +861,12 @@ input[type="checkbox"], input[type="radio"] {
   display: block;
 }
 
-.post,
-.page {
-  margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
   display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
 .page-links {
   clear: both;
-  margin: 0 0 1.5em;
 }
 
 /* Comments
@@ -1084,6 +1064,10 @@ input[type="checkbox"], input[type="radio"] {
 
 /* Local/accueil
 --------------------------------------------- */
+/*******************************************************************************
+ * _accueil.scss
+ * Modification de la page de pré-accueil
+ ******************************************************************************/
 * {
   box-sizing: border-box;
   user-select: none;
@@ -1091,11 +1075,18 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0;
 }
 
+/* -----------------------------------------------------------------------------
+Sélecteurs principaux
+----------------------------------------------------------------------------- */
 body.home {
   background-color: #E8F0FF;
   width: 100vw;
   overflow-x: hidden;
   margin: 0;
+}
+
+.home header {
+  display: none;
 }
 
 .home .entry-title {
@@ -1106,15 +1097,14 @@ body.home {
   display: none;
 }
 
-.home header {
-  display: none;
-}
-
+/* -----------------------------------------------------------------------------
+Sélecteurs pour la modification des images
+----------------------------------------------------------------------------- */
 .home figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   margin: none;
 }
@@ -1123,6 +1113,9 @@ body.home {
   margin: 0px;
 }
 
+/* -----------------------------------------------------------------------------
+Sélecteurs pour le mode sombre
+----------------------------------------------------------------------------- */
 .darkmode--activated body.home {
   mix-blend-mode: color;
   background-color: #383e49;
@@ -1130,34 +1123,41 @@ body.home {
 
 /* Local/pages
 --------------------------------------------- */
-.wp-block-search .wp-block-search__input {
-  flex-grow: 0.1;
+/*******************************************************************************
+ * _accueil.scss
+ * Modification de la page de pré-accueil
+ ******************************************************************************/
+/* -----------------------------------------------------------------------------
+Sélecteurs principaux
+----------------------------------------------------------------------------- */
+body {
+  background-image: url("../images/backgrounds/bg4.png");
+  background-image: url("http://localhost/captcha/wordpress/wp-admin/upload.php?item=67");
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
 }
 
-/* Les éléments du body */
-/* Les éléments du pied de page */
-.pied {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-columns: 0.05fr 1fr;
+.site-main {
+  position: relative;
+  height: 65vh;
 }
 
-.site-footer {
-  background-color: #b4cdff;
-  color: black;
-  font-family: 'Asap', sans-serif;
+h1 {
+  margin: 0em;
 }
 
-/*Les couleurs du darkMode du footer*/
-.darkmode--activated .site-footer {
-  mix-blend-mode: difference;
-  background-color: #586a8f;
-  color: #b4cdff;
-}
-
-.darkmode--activated .site-branding {
-  mix-blend-mode: difference;
-  background: linear-gradient(0deg, #93779c, #586a8f 30%) bottom;
+/* -----------------------------------------------------------------------------
+Sélecteurs pour les images et logo
+----------------------------------------------------------------------------- */
+.imgFond {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .custom-logo {
@@ -1180,8 +1180,41 @@ body.home {
   background: linear-gradient(0deg, #efbfff, #b4cdff 30%) bottom;
 }
 
+/* -----------------------------------------------------------------------------
+Les éléments du pied de page
+----------------------------------------------------------------------------- */
+.pied {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.05fr 1fr;
+}
+
+.site-footer {
+  background-color: #b4cdff;
+  color: black;
+  font-family: 'Asap', sans-serif;
+}
+
+/* -----------------------------------------------------------------------------
+Les couleurs du mode sombre du footer
+----------------------------------------------------------------------------- */
+.darkmode--activated .site-footer {
+  mix-blend-mode: difference;
+  background-color: #586a8f;
+  color: #b4cdff;
+}
+
+.darkmode--activated .site-branding {
+  mix-blend-mode: difference;
+  background: linear-gradient(0deg, #93779c, #586a8f 30%) bottom;
+}
+
 /* Local/cours
 --------------------------------------------- */
+/*******************************************************************************
+ * _cours.scss
+ * Modification de category/cours
+ ******************************************************************************/
 .cours {
   line-height: 2em;
   display: flex;
