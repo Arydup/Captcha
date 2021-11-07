@@ -34,5 +34,10 @@
 		echo '<img width="300" height="198" src="http://localhost/captcha/wp-content/uploads/2021/10/a20c5321f8d456e310e20063ae7d93a5.jpg" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy">';
 	}
 	?>
+
+	
+	<EMBED SRC="background_flow.mp4" WIDTH="200" HEIGHT="100" AUTOPLAY="TRUE" LOOP="true"></EMBED>
+	<!--Video loop background -->
+
 	</section>
 </article><!-- #post-<?php the_ID(); ?> -->
