@@ -36,7 +36,7 @@
 	?>
 
 	
-	<EMBED SRC="background_flow.mp4" WIDTH="200" HEIGHT="100" AUTOPLAY="TRUE" LOOP="true"></EMBED>
+	<!--<EMBED SRC="background_flow.mp4" WIDTH="200" HEIGHT="100" AUTOPLAY="TRUE" LOOP="true"></EMBED>-->
 	<!--Video loop background -->
 
 	</section>

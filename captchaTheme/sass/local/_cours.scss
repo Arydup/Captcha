@@ -2,17 +2,43 @@
     line-height: 2em;
     display: flex;
     border: 1px solid #aaa;
+    background-color: red;
 }
 .cours img {
     margin: 10px;
     height: 200px;
+    
+}
+.entry-content{
+    font-size: 12px;
+    justify-content: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /******À changer à la font originale*/
 }
 .session{
     display: flex;
     justify-content: center;
+    background-color: aqua;
+    border: solid 2px red;
+   
+    
+   
 }
+
 .session a{
     display: block;
-    padding: 5px 15px;
+    padding: 10px 60px;
+  
+}
+
+.session_cours{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    border: solid 4px green;
+}
+.session_cours a{
+    display: block;
+    padding: 10px 60px;
+  
 }
   
