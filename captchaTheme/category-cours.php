@@ -27,7 +27,7 @@ get_header();
 				<a href="#">Session 5</a>
 				<a href="#">Session 6</a>
 			</nav>
-			<nav class='session'>
+			<nav class='session_cours'>
 				<a href="#">1M1</a>
 				<a href="#">1M2</a>
 				<a href="#">1W1</a>
