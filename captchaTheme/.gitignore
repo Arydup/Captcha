@@ -1,0 +1,7 @@
+$ git status
+    [...]
+    # Untracked files:
+    [...]
+style-rtl.css
+**/style.css
+**/style.css.map
