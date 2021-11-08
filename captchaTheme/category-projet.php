@@ -19,25 +19,12 @@ get_header();
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-			<nav class='session'>
-				<a href="#">Session 1</a>
-				<a href="#">Session 2</a>
-				<a href="#">Session 3</a>
-				<a href="#">Session 4</a>
-				<a href="#">Session 5</a>
-				<a href="#">Session 6</a>
-			</nav>
-			<nav class='session'>
-				<a href="#">1M1</a>
-				<a href="#">1M2</a>
-				<a href="#">1W1</a>
-				<a href="#">1J1</a>
-			</nav>
 			</header><!-- .page-header -->
 
-			
+			<div class="listeProjets">
 			<?php
 
+			
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -55,6 +42,7 @@ get_header();
 
 		endif;
 		?>
+		 </div>
 
 
 	</main><!-- #main -->

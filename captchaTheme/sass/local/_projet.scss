@@ -1,58 +1,42 @@
 /*******************************************************************************
- * _accueil.scss
- * Modification de la page de pré-accueil
+ * _projet.scss
+ * Modification de la page projet
  ******************************************************************************/
-*{
-    box-sizing: border-box;
-    user-select: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* -----------------------------------------------------------------------------
-Sélecteurs principaux
------------------------------------------------------------------------------ */
-body.home {
-    background-color: $color__accueil-fond;
-    width : 100vw;
-    overflow-x :hidden;
-    margin: 0;
-}
-
-.home header{
-    display: none;
-}
-
-.home .entry-title{
-    display: none;
-}
-
-.home footer {
-    display: none;
-}
-
-/* -----------------------------------------------------------------------------
-Sélecteurs pour la modification des images
------------------------------------------------------------------------------ */
-.home figure{
+.projet{
+    margin: 1em;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
-    width: 100%;
-    margin: none;
-   
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    background-color: aquamarine;
+
+    & p{
+        text-align: center;
+    }
+
+    & img{
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+        height: auto;
+    }
 }
 
-.wp-block-image{
-    margin : 0px;
+.listeProjets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
 }
 
 /* -----------------------------------------------------------------------------
 Sélecteurs pour le mode sombre
 ----------------------------------------------------------------------------- */
 .darkmode--activated{
-    & body.home{
+    & body{
         mix-blend-mode: color;
         background-color: $color__accueil-fond_nuit;
     }
