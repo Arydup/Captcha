@@ -37,7 +37,7 @@
 				/* translators: 1: Theme name, 2: Theme author. */
 				//printf( esc_html__( 'Theme: %1$s by %2$s.', 'under' ), 'under', '<a href="http://underscores.me/">Abinassh</a>' );
 				?>
-		<p class="nomAuteurs">Conception et développement web par Aryane Duperron, Stéphanie Plante, Abinassh Kanesh & Cyrile Tanguay</p>
+		<p class="nomAuteurs">Conception et développement web par Aryane Duperron, Stéphanie Plante, Abinassh Kanesh & Cyrille Tanguay</p>
 		<p>Tous droits réservés ©2021 - Techniques d'intégration multimédia - Collège de Maisonneuve</p>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
