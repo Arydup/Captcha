@@ -12,11 +12,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<section class='projet'>
+		<?php echo the_post_thumbnail();?>
 		<?php the_title( '<h3>', '</h3>' );?>
 		<div class="">
 			<p><?php echo get_field('auteur');?></p>
-			<?php echo the_post_thumbnail();?>
+			<p><?php echo get_field('description');?></p>
+			<p><?php echo get_field('logiciels');?></p>
 		</div>
 
 	</section>
 </article><!-- #post-<?php the_ID(); ?> -->
+     
