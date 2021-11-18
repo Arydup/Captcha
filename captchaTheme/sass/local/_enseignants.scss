@@ -1,0 +1,41 @@
+.PageEnseignants{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+
+.enseignants{
+    margin: 1em;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    width: 300px;
+    height: 200px;
+    background-color: #FFE1FE;
+    
+    & p{
+        text-align: center;
+    }
+
+    & img{
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+        height: auto;
+        border-radius: 20%;
+    }
+}
+
+
+
+.InfoEnseignants{
+    div{
+    opacity: 0;
+    background-color: aqua;}
+    
+}

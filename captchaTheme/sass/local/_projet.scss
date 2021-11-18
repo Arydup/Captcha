@@ -41,7 +41,7 @@ Sélecteurs pour les boutons
 ----------------------------------------------------------------------------- */
 .ctrl-chiffre{
     a {
-        background-color: $color__projet-bouttons;
+        //background-color: $color__projet-bouttons;
         color: black;
         text-decoration: none;
         display: inline-block;
@@ -50,7 +50,7 @@ Sélecteurs pour les boutons
       }
 
     a:hover {
-        background-color: $color__projet-bouttons;
+        //background-color: $color__projet-bouttons;
         color: rgb(255, 255, 255);       
     }
 }
@@ -60,11 +60,11 @@ Sélecteurs pour le mode sombre
 .darkmode--activated{
     & body{
         mix-blend-mode: color;
-        background-color: $color__accueil-fond_nuit;
+        //background-color: $color__accueil-fond_nuit;
     }
     & .ctrl-chiffre{
         a {
-            background-color: $color__projet-bouttons_nuit;
+            //background-color: $color__projet-bouttons_nuit;
             color: white;
         }
     }
