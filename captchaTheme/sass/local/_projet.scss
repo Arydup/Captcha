@@ -2,7 +2,7 @@
  * _projet.scss
  * Modification de la page projet
  ******************************************************************************/
-.projet{
+ .projet{
     margin: 1em;
     margin: 2px;
     display: flex;
@@ -59,8 +59,7 @@ Sélecteurs pour le mode sombre
 ----------------------------------------------------------------------------- */
 .darkmode--activated{
     & body{
-        mix-blend-mode: color;
-        background-color: $color__accueil-fond_nuit;
+        //background-color: $color__accueil-fond_nuit;
     }
     & .ctrl-chiffre{
         a {

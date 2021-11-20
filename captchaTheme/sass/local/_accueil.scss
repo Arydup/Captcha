@@ -13,7 +13,7 @@
 Sélecteurs principaux
 ----------------------------------------------------------------------------- */
 body.home {
-    background-color: $color__accueil-fond;
+    //background-color: $color__accueil-fond;
     width : 100vw;
     overflow-x :hidden;
     margin: 0;
@@ -53,8 +53,8 @@ Sélecteurs pour le mode sombre
 ----------------------------------------------------------------------------- */
 .darkmode--activated{
     & body.home{
-        mix-blend-mode: color;
-        background-color: $color__accueil-fond_nuit;
+        //mix-blend-mode: color;
+        //background-color: $color__accueil-fond_nuit;
     }
 }
 

@@ -7,11 +7,20 @@
 Sélecteurs principaux
 ----------------------------------------------------------------------------- */
 body{
-   background-image:url('../images/backgrounds/bg4.png');
-   background-image: url("http://localhost/captcha/wordpress/wp-admin/upload.php?item=67");
     height: 100vh;
     width: 100vw;
     margin: 0;
+}
+.site{
+    width: 100vw;
+    height: 100vh;
+    //background-image: url("http://localhost/captcha/wp-content/uploads/2021/11/fond_jour.png");
+    //background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
 }
 
 .site-main{
@@ -76,15 +85,21 @@ Les éléments du pied de page
 /* -----------------------------------------------------------------------------
 Les couleurs du mode sombre du footer
 ----------------------------------------------------------------------------- */
+.darkmode-layer{
+    background: none !important;
+    mix-blend-mode: normal;
+}
 .darkmode--activated{
     & .site-footer{
-        mix-blend-mode: difference;
         background-color: $color__footer-fond_nuit;
         color: $color__footer-texte_nuit;
     }
 
     & .site-branding{
-        mix-blend-mode: difference;
-        background: linear-gradient(0deg, $color__nav_nuit, $color__header-fond_nuit 30%) bottom;
+       background: linear-gradient(0deg, $color__nav_nuit, $color__header-fond_nuit 30%) bottom;
     }
+    .site{
+       //background-image: url("http://localhost/captcha/wp-content/uploads/2021/11/fond_nuit.png");         
+    }
+    
 }
