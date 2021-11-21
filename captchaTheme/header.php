@@ -29,7 +29,10 @@
 <div id="page" class="site"  style="background-image: url('<?php if(!$darkmodeActive): echo esc_url( home_url( '/' ).'wp-content/uploads/2021/11/fond_jour.png'); else: echo esc_url( home_url( '/' ).'wp-content/uploads/2021/11/fond_nuit.png'); endif;?>');">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'under' ); ?></a>
 
+	<div class="couleurArriere"></div>
 	<header id="masthead" class="site-header">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill-opacity="1" d="M0,32L60,37.3C120,43,240,53,360,53.3C480,53,600,43,720,74.7C840,107,960,181,1080,224C1200,267,1320,277,1380,282.7L1440,288L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path  fill="$color__header-fond_nuit" fill-opacity="1" d="M0,300L80,300C160,300,320,300,480,250.3C640,200,800,117,960,69.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -55,7 +58,6 @@
 				<div class="modeSombreToggle"></div>
 			</label>
 		</div><!-- .site-branding -->
-
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'under' ); ?></button>
 			<?php
@@ -66,6 +68,7 @@
 				)
 			);
 			?>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill-opacity="1" d="M0,64L30,53.3C60,43,120,21,180,58.7C240,96,300,192,360,192C420,192,480,96,540,64C600,32,660,64,720,85.3C780,107,840,117,900,112C960,107,1020,85,1080,101.3C1140,117,1200,171,1260,170.7C1320,171,1380,117,1410,90.7L1440,64L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

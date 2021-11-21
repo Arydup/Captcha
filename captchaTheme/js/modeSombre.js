@@ -1,6 +1,6 @@
 
 ( function() {
-    
+
     let modeSombreActive = document.querySelector(".modeSombre-checkbox");
     let modeSombreToggle = document.querySelector(".modeSombreToggle");
 

@@ -12,9 +12,10 @@
 ?>
 
 <footer id="colophon" class="site-footer">
-
 	<div class="site-info">
-		<div class="pied">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill-opacity="1" d="M0,224L80,197.3C160,171,320,117,480,90.7C640,64,800,64,960,96C1120,128,1280,192,1360,224L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill-opacity="1" d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,149.3C840,117,960,75,1080,64C1200,53,1320,75,1380,85.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill-opacity="1" d="M0,96L60,96C120,96,240,96,360,117.3C480,139,600,181,720,213.3C840,245,960,267,1080,261.3C1200,256,1320,224,1380,208L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
 			<div class="reseaux">
 				<a href="https://fr-ca.facebook.com/maisonneuvetim/" title="Facebook (TIM)"><i class="fab fa-facebook-f"></i></a>
 				<a href="https://www.instagram.com/maisonneuvetim/?hl=fr" title="Instagram (TIM)"><i class="fab fa-instagram"></i></a>

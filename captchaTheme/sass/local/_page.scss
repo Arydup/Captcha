@@ -12,8 +12,8 @@ body{
     margin: 0;
 }
 .site{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     //background-image: url("http://localhost/captcha/wp-content/uploads/2021/11/fond_jour.png");
     //background-attachment: fixed;
     background-repeat: no-repeat;
@@ -25,8 +25,7 @@ body{
 
 .site-main{
     position: relative;
-    height: 65vh;
-
+    //height: 65vh;
 }
 
 h1{
@@ -60,12 +59,49 @@ Sélecteurs pour les images et logo
 }
 
 .site-branding{
+    position: relative;
+    padding: 0 20px 0 5px;
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: linear-gradient(0deg, $color__nav, $color__header-fond 30%) bottom;
+    justify-content:space-between;
+    //background: linear-gradient(0deg, $color__nav, $color__header-fond 30%) bottom;
+
 }
+header svg{
+    position: absolute;
+    display: block;
+    max-height: 70px;
+    min-height: 70px;
+    width: 100%;
+    fill: $color__header-fond;
+    &:first-child{
+        fill: $color__header-fond2;
+    }
+}
+
+.main-navigation svg{
+    fill: $color__nav;
+    position: absolute;
+    display: block;
+    max-height: 70px;
+    min-height: 70px;
+    width: 100%;
+    animation: wave 15s infinite linear;
+}
+
+.couleurArriere{
+    position: absolute;
+    background-color: $color__nav;
+    height: 60px;
+    width: 100%;
+}
+
+@keyframes wave {
+    //from { transform: translate(0px);}
+    //from { transform: translate(50px);}
+}
+
 
 /* -----------------------------------------------------------------------------
 Les éléments du pied de page
@@ -76,10 +112,34 @@ Les éléments du pied de page
     grid-template-columns: 1fr 1fr;
     grid-template-columns: 0.05fr 1fr;
 }
+.site-info{
+    display: block;
+    position: relative;
+    //max-height: 140px;
+    //min-height: 140px;
+    //width: 100%;
+}
 .site-footer{
-    background-color: $color__footer-fond;
+    //background-color: $color__footer-fond;
     color: $color__footer-texte;
     font-family: 'Asap', sans-serif;
+    
+    & svg{
+        max-height: 140px;
+        min-height: 140px;
+        width: 100%;
+        display: block;
+        //z-index: 0;
+        position: absolute; 
+        fill: $color__nav;
+        &:nth-child(2){
+            fill: $color__footer-fond;
+        }
+        &:nth-child(3){
+            fill: $color__footer-fond2;
+            //max-height: 135px;
+        }
+    }
 }
 
 /* -----------------------------------------------------------------------------
@@ -91,15 +151,36 @@ Les couleurs du mode sombre du footer
 }
 .darkmode--activated{
     & .site-footer{
-        background-color: $color__footer-fond_nuit;
+        //background-color: $color__footer-fond_nuit;
         color: $color__footer-texte_nuit;
+        & svg{
+            fill: $color__nav_nuit;
+            &:nth-child(2){
+                fill: $color__footer-fond_nuit;
+            }
+            &:nth-child(3){
+                fill: $color__footer-fond2_nuit;
+            }
+        }
     }
 
     & .site-branding{
-       background: linear-gradient(0deg, $color__nav_nuit, $color__header-fond_nuit 30%) bottom;
+       //background: linear-gradient(0deg, $color__nav_nuit, $color__header-fond_nuit 30%) bottom;
     }
     .site{
        //background-image: url("http://localhost/captcha/wp-content/uploads/2021/11/fond_nuit.png");         
+    }
+    header svg{
+        fill: $color__header-fond_nuit;
+        &:first-child{
+            fill: $color__header-fond2_nuit;
+        }
+    }
+    .main-navigation svg{
+        fill: $color__nav_nuit;
+    }
+    .couleurArriere{
+        background-color: $color__nav_nuit;
     }
     
 }
