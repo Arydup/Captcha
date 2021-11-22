@@ -21,7 +21,7 @@ $color__border-abbr: #666;
 
 /* Les couleurs de la navigation*/
 $color__nav : rgb(239, 191, 255);
-$color__nav-scrollbar : rgb(252, 213, 235);
+$color__nav-scrollbar : rgb(252, 213, 213);
 $color__nav-scrollbar-thumb : rgba(0, 0, 0, 0.2);
 $color__nav-link : rgb(0, 0, 0);
 $color__nav-link-hover : rgb(162, 163, 167);
@@ -29,19 +29,21 @@ $color__nav-link-hover-shadow : rgba(167, 210, 221, 0.1);
 $color__page_active : rgb(255, 255, 255);
 
 /* Les couleurs de la navigation mode nuit */
-$color__nav_nuit : rgb(147, 119, 156);
-$color__nav-scrollbar_nuit : rgb(255, 212, 236);
-$color__nav-scrollbar-thumb_nuit : rgba(0, 0, 0, 0.6);
+$color__nav_nuit : #06064A;
+$color__nav-scrollbar_nuit : #4429AA;
+$color__nav-scrollbar-thumb_nuit : rgba(185, 230, 248, 0.6);
 $color__nav-link_nuit : rgb(180, 205, 255);
 $color__nav-link-hover_nuit : rgb(233, 205, 251);
 $color__nav-link-hover-shadow_nuit : rgba(107, 231, 253, 0.144);
-$color__page_active_nuit : rgb(0, 0, 0);
+$color__page_active_nuit : #4429AA;
 
 /* Les couleurs du header */
 $color__header-fond : rgb(180, 205, 255);
+$color__header-fond2 : rgb(151, 175, 255);
 $color__modeJourNuit-fond : rgb(20, 14, 53);
 
-$color__header-fond_nuit : rgb(88, 106, 143);
+$color__header-fond_nuit : #1E0874;
+$color__header-fond2_nuit : #4429AA;
 $color__modeJourNuit-fond_nuit : rgb(213, 209, 216);
 
 /* Les couleurs de fond du site */
@@ -50,12 +52,26 @@ $color__fond_nuit : rgb(117, 132, 163);
 
 /* Les couleurs du footer */
 $color__footer-texte : rgb(0, 0, 0);
-$color__footer-fond : rgb(180, 205, 255);
+$color__footer-fond : rgb(151, 175, 255);
+$color__footer-fond2 : rgb(180, 205, 255);
 
 $color__footer-texte_nuit : rgb(180, 205, 255);
-$color__footer-fond_nuit : rgb(88, 106, 143);
+$color__footer-fond_nuit : #1E0874;
+$color__footer-fond2_nuit : #06064A;
+$color__footer-fond3_nuit : #4429AA;
 
 /* Les couleurs de la page d'accueil */
-$color__accueil-fond : #E8F0FF;
+//$color__accueil-fond : #E8F0FF;
+//$color__accueil-fond_nuit : #383e49;
 
-$color__accueil-fond_nuit : #383e49;
+/* Les couleurs de la page projet */
+$color__projet-bouttons : #EBC0FF;
+$color__projet-bouttons_nuit : #1E0874;
+
+//$color__accueil-fond_nuit : #383e49;
+
+/* Les couleurs enseigannts */
+$color__enseignants-nuit : #1E0874;
+$color--enseignants-texte: blue;
+
+
