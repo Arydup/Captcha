@@ -145,6 +145,7 @@ function captcha_scripts() {
 
 	wp_enqueue_script( 'under-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'modeSombre', get_template_directory_uri() . '/js/modeSombre.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'enseignants',get_template_directory_uri() . '/js/enseignants.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
