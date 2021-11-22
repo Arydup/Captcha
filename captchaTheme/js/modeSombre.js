@@ -1,6 +1,4 @@
-
 ( function() {
-
     let modeSombreActive = document.querySelector(".modeSombre-checkbox");
     let modeSombreToggle = document.querySelector(".modeSombreToggle");
 
@@ -8,5 +6,5 @@
         modeSombreActive.toggleAttribute("checked");
     };
     
-    modeSombreToggle.addEventListener('click', function(){ document.documentElement.style.setProperty('--transitionTemps', "left 0.25s"); })
+    modeSombreToggle.addEventListener('click', function(){ document.documentElement.style.setProperty('--transitionTemps', "left 0.25s");})
 }() );

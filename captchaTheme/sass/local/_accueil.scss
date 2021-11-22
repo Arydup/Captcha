@@ -52,12 +52,61 @@ Sélecteurs pour la modification des images
 }
 
 /* -----------------------------------------------------------------------------
+Sélecteurs pour les textes de la page d'accueil
+----------------------------------------------------------------------------- */
+.texteAccueil{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: "asap", sans-serif;
+    font-weight: 600;
+    text-shadow: 0px 0px 10px #7a7a7a;
+    
+    p:nth-child(2){
+        font-size:400;
+        font-style: italic;
+    }
+    .saveur{
+        font-family: 'Concert One', cursive;
+        background: #121FCF;
+        background: -webkit-linear-gradient(to right, #121FCF 0%, #FF26E9 50%, #CF1512 100%);
+        background: -moz-linear-gradient(to right, #121FCF 0%, #FF26E9 50%, #CF1512 100%);
+        background: linear-gradient(to right, #121FCF 0%, #FF26E9 50%, #CF1512 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    @include tablette{
+        font-size: 1.4em;
+        text-align: left;
+        margin-left: 10%;
+        p{
+            margin-bottom: 10px;
+            &:nth-child(2){
+                margin-left: 50px;
+            }
+        }
+    }
+    @include bureau{
+        font-size: 1.6em;
+        margin-left: 13%;
+    }
+}
+
+/* -----------------------------------------------------------------------------
 Sélecteurs pour le mode sombre
 ----------------------------------------------------------------------------- */
 .darkmode--activated{
-    & body.home{
-        //mix-blend-mode: color;
-        //background-color: $color__accueil-fond_nuit;
+    & .texteAccueil{
+        color: $color__footer-texte_nuit;
+    }
+    .saveur{
+        background: #15C3CF;
+        background: -webkit-linear-gradient(to right, #15C3CF 0%, #FFA6E7 50%, #CF5757 100%);
+        background: -moz-linear-gradient(to right, #15C3CF 0%, #FFA6E7 50%, #CF5757 100%);
+        background: linear-gradient(to right, #15C3CF 0%, #FFA6E7 50%, #CF5757 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 

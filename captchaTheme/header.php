@@ -22,11 +22,14 @@
 	<?php wp_head(); ?>
 </head>
 
-<?php $darkmodeActive=false; ?>
 
-<body <?php body_class(); ?>>
+<?php 
+	$darkmodeActive=false; 
+?>
+
+<body <?php body_class();?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site"  style="background-image: url('<?php if(!$darkmodeActive): echo esc_url( home_url( '/' ).'wp-content/uploads/2021/11/fond_jour.png'); else: echo esc_url( home_url( '/' ).'wp-content/uploads/2021/11/fond_nuit.png'); endif;?>');">
+<div id="page" class="site <?php if(get_the_title()==="Accueil"):?>accueil<?php endif;?>" >
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'under' ); ?></a>
 
 	<div class="couleurArriere"></div>
@@ -72,6 +75,9 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<script>
+    </script>
 	<!--Librairie JS pour le darkmode-->
 	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 	<script>const darkmode = new Darkmode();</script>
+	
