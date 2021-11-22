@@ -20,6 +20,13 @@
 		margin: 0;
 		padding-left: 0;
 
+		@include bureau{
+			width: 100vw;
+			-webkit-overflow-scrolling: auto;
+			-ms-overflow-style: none;
+			justify-content: space-around;
+		}
+
 		&::-webkit-scrollbar{
 			//display: flex;
 			background-color: $color__nav-scrollbar;
@@ -78,7 +85,7 @@
 		position: relative;
 		display: inline-block;
 		padding: 14px;
-		padding: 10px 5% ;
+		//padding: 10px 5%;
 		text-decoration: none;
 
 		&:hover > a,
@@ -105,6 +112,9 @@
 		color: $color__page_active;
 	}
 }
+
+/* Pour la navigation de l'accueil */
+
 
 
 /* Small menu. */
@@ -157,7 +167,10 @@ input[type="checkbox"], input[type="radio"] {
 	position: absolute;
 	visibility: hidden;
 }
-
+/*
+.transition{
+	transition: left 0.25s;
+}*/
 .modeSombreToggle{
     display: inline-block;
     background: rgb(226, 223, 223);
@@ -166,8 +179,9 @@ input[type="checkbox"], input[type="radio"] {
     height: 22px;
     position: relative;
     vertical-align: middle;
-    //transition: background 0.25s;
+    //transition: left 0.25s;
     top: -2px;
+
 	&::before{
 		/*L'icone du soleil*/
 		font-family: "Font Awesome 5 Free"; 
@@ -177,14 +191,15 @@ input[type="checkbox"], input[type="radio"] {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: rgb(238, 204, 220);
+		background-color: $color__nav;
 		border-radius: 50%;
 		width: 18px;
 		height: 18px;
 		position: absolute;
 		top: 2px;
 		left: 2px;
-		transition: left 0.25s;
+		//transition: left 0.25s;
+		transition: var(--transitionTemps);
 	}
 }
 
@@ -207,23 +222,18 @@ input[type="checkbox"], input[type="radio"] {
 .darkmode--activated{
     & .main-navigation{ 	
 		& ul{
-			mix-blend-mode:difference;
 			background-color: $color__nav_nuit;
 			&::-webkit-scrollbar{
-        		mix-blend-mode:difference;
 				background-color: $color__nav-scrollbar_nuit;        
 			}
 			&::-webkit-scrollbar-thumb{
-				mix-blend-mode:difference;
 				background-color: $color__nav-scrollbar-thumb_nuit;        
 			}			
     	}
 		& a{
-			mix-blend-mode:lighten;
 			color: $color__nav-link_nuit;			
 		}
 		& a:hover{
-			mix-blend-mode:difference;
 			color: $color__nav-link-hover_nuit;
 			text-shadow: 2px 1px 0px $color__nav-link-hover-shadow_nuit;
 		}
@@ -231,8 +241,10 @@ input[type="checkbox"], input[type="radio"] {
 		.current-menu-item > a,
 		.current_page_ancestor > a,
 		.current-menu-ancestor > a {
-			mix-blend-mode:darken;
 			color: $color__page_active_nuit;
 		}
+	}
+	& .modeSombreToggle::before{
+		background-color: $color__nav_nuit;
 	}
 }
