@@ -13,13 +13,13 @@
 $desktop__accueil : 800px;
 $desktop__tablette : 600px;
 
-@mixin desktop{
+@mixin bureau{
 	@media (min-width : #{$desktop__accueil}){
 		@content;
 	}
 }
 
-@mixin tablet{
+@mixin tablette{
 	@media (min-width : #{$desktop__tablette}){
 		@content;
 	}
