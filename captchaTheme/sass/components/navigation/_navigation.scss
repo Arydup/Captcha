@@ -20,6 +20,13 @@
 		margin: 0;
 		padding-left: 0;
 
+		@include bureau{
+			width: 100vw;
+			-webkit-overflow-scrolling: auto;
+			-ms-overflow-style: none;
+			justify-content: space-around;
+		}
+
 		&::-webkit-scrollbar{
 			//display: flex;
 			background-color: $color__nav-scrollbar;
@@ -78,7 +85,7 @@
 		position: relative;
 		display: inline-block;
 		padding: 14px;
-		padding: 10px 5% ;
+		//padding: 10px 5%;
 		text-decoration: none;
 
 		&:hover > a,
@@ -184,7 +191,7 @@ input[type="checkbox"], input[type="radio"] {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: rgb(238, 204, 220);
+		background-color: $color__nav;
 		border-radius: 50%;
 		width: 18px;
 		height: 18px;
@@ -236,5 +243,8 @@ input[type="checkbox"], input[type="radio"] {
 		.current-menu-ancestor > a {
 			color: $color__page_active_nuit;
 		}
+	}
+	& .modeSombreToggle::before{
+		background-color: $color__nav_nuit;
 	}
 }
