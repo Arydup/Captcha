@@ -44,9 +44,14 @@
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			else :
+				if (is_category(10)):
 				?>
+				<!--<video src=""></video>-->
+				<!--<img width="290" height="300" src="http://localhost:81/Captcha/wp-content/uploads/2021/11/background-flow_loop_4sec.mp4" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" srcset="http://localhost:81/Captcha/wp-content/uploads/2021/10/MicrosoftTeams-image-5-290x300.jpg 290w, http://localhost:81/Captcha/wp-content/uploads/2021/10/MicrosoftTeams-image-5.jpg 337w" sizes="(max-width: 290px) 100vw, 290px">**>
+
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
+			endif;
 			endif;
 			$under_description = get_bloginfo( 'description', 'display' );
 			if ( $under_description || is_customize_preview() ) :
