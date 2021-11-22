@@ -16,23 +16,28 @@ get_header();
 
 			<header class="page-header">
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				//the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-			<nav class='session'>
-				<a href="#">Session 1</a>
+			<nav class='session'>		<!-- Menu des sessions -->
+				<a href="#"><i class="fas fa-caret-right"></i>Session 1</a>
 				<a href="#">Session 2</a>
 				<a href="#">Session 3</a>
 				<a href="#">Session 4</a>
 				<a href="#">Session 5</a>
 				<a href="#">Session 6</a>
 			</nav>
-			<nav class='session'>
-				<a href="#">1M1</a>
-				<a href="#">1M2</a>
-				<a href="#">1W1</a>
-				<a href="#">1J1</a>
+
+			<hr class="ligne"> </hr>
+
+			<nav class='session_cours'> <!-- Sous menu des sessions -->
+				<a href="#">Design</a>
+				<a href="#">Web</a>
+				<a href="#">Vidéo</a>
+				<a href="#">Jeu</a>
 			</nav>
+			<hr class="lignedeux"> </hr>
+
 			</header><!-- .page-header -->
 
 			
@@ -60,5 +65,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

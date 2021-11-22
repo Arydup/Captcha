@@ -141,6 +141,7 @@ add_action( 'widgets_init', 'under_widgets_init' );
  */
 function under_scripts() {
 	wp_enqueue_style( 'under-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
 	wp_style_add_data( 'under-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'under-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -190,7 +191,7 @@ function extraire_article_accueil($query) {
 add_action( "pre_get_posts", "extraire_article_accueil" );
 */
 function extraire_article_cours($query) {
-    if(  !is_admin() && $query->is_category('7') && $query->is_main_query() ) {
+    if(  !is_admin() && $query->is_category('10') && $query->is_main_query() ) {
         //$query->set('meta_key', 'ordre');
         //$query->set('orderby', array('meta_value' => "ASC"));
 		$query->set('orderby', array('title' => "ASC"));

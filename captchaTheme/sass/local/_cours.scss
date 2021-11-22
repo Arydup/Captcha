@@ -2,21 +2,153 @@
  * _cours.scss
  * Modification de category/cours
  ******************************************************************************/
+
+
+/*-------------NAVIGATION SESSION----------------------*/
+
+.session {                       /*-------------Navigation session----------------------*/         
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 20px;
+    //background-color: lightskyblue;
+    }
+
+.session a {                    /*-------------Text navigations session--------------*/
+    display: block;
+    padding: 5px 10px;
+    margin: 5px 68px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ligne {                        /*-------------Ligne rose-------------------*/
+    overflow: hidden;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 208, 215);
+    background-color: rgb(255, 208, 215);
+    border-width: 5px;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.session_cours {                /*-------------Navigation cours----------------------*/
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.session_cours a {              /*-------------Text navigation cours---------------------*/
+    display: block;
+    padding: 5px 10px;
+    margin: 5px 68px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.lignedeux {                    /*-------------Ligne bleu----------------------*/
+    overflow: hidden;
+    border-style: dotted;
+    //border-color: lightskyblue;
+    background-color: rgb(135, 206, 250);
+    border-width: 2px;
+    width: 60%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/*-------------TEXTE DES COURS----------------------*/
+.site-main {
+    background-color: rgb(207, 233, 250);
+}
+
 .cours {
     line-height: 2em;
     display: flex;
-    border: 1px solid #aaa;
+    //border: 1px solid red;
+    justify-content: space-around;
+    background-color: rgb(207, 233, 250);
+
+    h2 {
+        display: flex;
+        align-items: center;
+
+        .fas {
+            display: block;
+            
+            padding: 5px
+           
+        }
+
+        span {
+            display: block;
+            border-left: solid 2px black;
+            padding: 5px;
+
+        }
+    }
+
+    .entry-content {
+        padding: 20px;
+        font-size: 15px;
+     //   font-family: Asap&family;
+        justify-content: center;
+        margin-left: 20em;
+        //margin-top: 5em;
+        flex : 1 0 50%;
+    
+        p{
+            text-align: justify;
+        }
+    
+      
+    
+    }
+
+
+    figure {
+        display : flex;
+        flex-direction: column;
+    a{
+        font-weight: bold;
+        font-size: 15px;
+        padding-left: 10px;
+        
+    }
+    }
+
 }
+
 .cours img {
     margin: 10px;
     height: 200px;
 }
-.session{
-    display: flex;
-    justify-content: center;
+
+.entry-header {
+    font-size: 20px;
+    font-weight: bold;
+    //margin-left:16em;
+    background-color: rgb(207, 233, 250);
+
+
+
 }
-.session a{
-    display: block;
-    padding: 5px 15px;
-}
-  
+
+
+
+
+
+/*-------------IMAGES----------------------*/
+
