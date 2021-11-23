@@ -47,7 +47,7 @@
 				if (is_category(10)):
 				?>
 				<!--<video src=""></video>-->
-				<!--<img width="290" height="300" src="http://localhost:81/Captcha/wp-content/uploads/2021/11/background-flow_loop_4sec.mp4" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" srcset="http://localhost:81/Captcha/wp-content/uploads/2021/10/MicrosoftTeams-image-5-290x300.jpg 290w, http://localhost:81/Captcha/wp-content/uploads/2021/10/MicrosoftTeams-image-5.jpg 337w" sizes="(max-width: 290px) 100vw, 290px">**>
+				<!--<img width="290" height="300" src="http://localhost:81/Captcha/wp-content/uploads/2021/11/background-flow_loop_4sec.mp4" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" srcset="http://localhost:81/Captcha/wp-content/uploads/2021/10/MicrosoftTeams-image-5-290x300.jpg 290w, http://localhost:81/Captcha/wp-content/uploads/2021/10/MicrosoftTeams-image-5.jpg 337w" sizes="(max-width: 290px) 100vw, 290px">-->
 
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
@@ -80,8 +80,6 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<script>
-    </script>
 	<!--Librairie JS pour le darkmode-->
 	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 	<script>const darkmode = new Darkmode();</script>

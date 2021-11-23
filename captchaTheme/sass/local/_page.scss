@@ -20,7 +20,7 @@ body{
     height: 100%;
     
     
-    background-image: url("http://localhost/captcha/wordpress/wp-content/uploads/2021/11/fond2_nuit.png");
+    background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond2-1.png");
 
     //background-attachment: fixed;
     background-repeat: no-repeat;
@@ -30,7 +30,7 @@ body{
     
 }
 .home .site, .accueil{
-    background-image: url("http://localhost/captcha/wordpress/wp-content/uploads/2021/11/fond_jour.png"); 
+    background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond_jour.png"); 
 
 }
 
@@ -267,7 +267,7 @@ Les couleurs du mode sombre
     }
     .site{
         background-blend-mode: darken;
-        background-image: url("http://localhost/captcha/wordpress/wp-content/uploads/2021/11/fond2_nuit-1.png");         
+        background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond2_nuit.png");         
     }
     
     header svg{
@@ -285,6 +285,6 @@ Les couleurs du mode sombre
     
 }
 .home.darkmode--activated .site, .darkmode--activated .accueil{
-    background-image: url("http://localhost/captcha/wordpress/wp-content/uploads/2021/11/fond_nuit.png");
+    background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond_nuit.png");
 
 }
