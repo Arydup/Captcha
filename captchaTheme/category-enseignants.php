@@ -43,9 +43,15 @@ get_header();
 
 			endwhile;
 			
+			
 
 			
-			?></section>
+			?>
+			
+			
+			</section>
+			
+
 			
 
 			<?php
