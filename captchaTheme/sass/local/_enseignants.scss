@@ -63,33 +63,78 @@
     }
 }
 
+.enseignants:hover{
+    background-color: brown;
+    p:hover{
+        color: brown;
+    }
+}
 
-
+/*******************************************************************************
+ * CARTE D'INFORMATIONS DES PROFS
+ ******************************************************************************/
+ 
 .InfoEnseignants{
-    display: none;
+    /*display: block;
+    position: ob;
     background-color: #FFE1FE;
     border-radius: 10% ;
     width: 500px;
     height: 270px;
     margin-top: 75px;
     margin-bottom: 65px;
-    overflow-y: scroll;
-    
-    
-    
+    overflow-y: scroll;*/
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    width: 10vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    transition: 0.3s ease;
+    opacity: 100;
+    z-index: 998;
+}
+
+.InfoEnseignants .carteInfo{
+    position: relative;
+    background-color: #FFF;
+    width: 65vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.InfoEnseignants .carteInfo .bouton-fermeture{
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 40px;
+    height: 40px;
+    padding: 25px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #f8d4f0;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
 }
 
 .InfoEnseignants::-webkit-scrollbar {
     width: 5px;
   }
   
-  /* Track */
-  .InfoEnseignants::-webkit-scrollbar-track {
+  
+ /* .InfoEnseignants::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
   }
   
-  /* Handle */
+  
   .InfoEnseignants::-webkit-scrollbar-thumb {
     background: rgb(95, 95, 95);
     border-radius: 10px;
@@ -140,7 +185,7 @@
             
         }
     }
-}
+}*/
 
 @media (max-width:1025px){
 
