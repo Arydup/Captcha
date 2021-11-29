@@ -2,7 +2,7 @@
  * _projet.scss
  * Modification de la page projet
  ******************************************************************************/
-.projet{
+ .projet{
     margin: 1em;
     margin: 2px;
     display: flex;
@@ -13,7 +13,7 @@
     width: 300px;
     height: 200px;
     background-color: aquamarine;
-
+    
     & p{
         text-align: center;
     }
@@ -36,12 +36,13 @@
     justify-content: space-around;
     width: 100%;
 }
+
 /* -----------------------------------------------------------------------------
 Sélecteurs pour les boutons
 ----------------------------------------------------------------------------- */
 .ctrl-chiffre{
     a {
-        //background-color: $color__projet-bouttons;
+        background-color: $color__projet-bouttons;
         color: black;
         text-decoration: none;
         display: inline-block;
@@ -58,16 +59,13 @@ Sélecteurs pour les boutons
 Sélecteurs pour le mode sombre
 ----------------------------------------------------------------------------- */
 .darkmode--activated{
-    & body{
-        mix-blend-mode: color;
-        //background-color: $color__accueil-fond_nuit;
-    }
     & .ctrl-chiffre{
         a {
-            //background-color: $color__projet-bouttons_nuit;
             color: white;
+            background-color: $color__projet-bouttons_nuit;
         }
     }
+
 }
 
 

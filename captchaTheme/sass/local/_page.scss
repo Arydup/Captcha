@@ -7,17 +7,36 @@
 Sélecteurs principaux
 ----------------------------------------------------------------------------- */
 body{
-   background-image:url('../images/backgrounds/bg4.png');
-   background-image: url("http://localhost/captcha/wordpress/wp-admin/upload.php?item=67");
     height: 100vh;
     width: 100vw;
     margin: 0;
+    
+}
+.site{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    
+    
+    background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond2-1.png");
+
+    //background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+.home .site, .accueil{
+    background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond_jour.png"); 
+
 }
 
 .site-main{
     position: relative;
-    height: 65vh;
-
+    //height: 65vh;
 }
 
 h1{
@@ -51,40 +70,221 @@ Sélecteurs pour les images et logo
 }
 
 .site-branding{
+    position: relative;
+    padding: 0 20px 0 5px;
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: linear-gradient(0deg, $color__nav, $color__header-fond 30%) bottom;
+    justify-content:space-between;
 }
+
+header svg{
+    position: absolute;
+    display: block;
+    max-height: 70px;
+    min-height: 70px;
+    width: 100%;
+    fill: $color__header-fond;
+    &:first-child{
+        fill: $color__header-fond2;
+    }
+}
+
+.main-navigation svg{
+    fill: $color__nav;
+    position: absolute;
+    display: block;
+    max-height: 70px;
+    min-height: 70px;
+    width: 100%;
+    animation: wave 15s infinite linear;
+}
+
+.couleurArriere{
+    position: absolute;
+    background-color: $color__nav;
+    height: 60px;
+    width: 100%;
+}
+
+@keyframes wave {
+    //from { transform: translate(0px);}
+    //from { transform: translate(50px);}
+}
+
 
 /* -----------------------------------------------------------------------------
 Les éléments du pied de page
 ----------------------------------------------------------------------------- */
 
 .pied{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-columns: 0.05fr 1fr;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr;
+   // grid-template-columns: 0.05fr 1fr;
 }
+
+
+.site-info{
+    
+    
+}
+#secondary{display: none;}
 .site-footer{
-    background-color: $color__footer-fond;
     color: $color__footer-texte;
     font-family: 'Asap', sans-serif;
+    position: relative;
+    
+    & svg{
+        max-height: 150px;
+        min-height: 150px;
+        width: 100%;
+        //display: block;
+        position: absolute; 
+        bottom: -8%;
+        left: 0%;
+        fill: $color__nav;
+        @include bureau{
+            bottom: -6%;
+        }
+        &:nth-child(2){
+            fill: $color__footer-fond;
+            
+        }
+        &:nth-child(3){
+            fill: $color__footer-fond2;
+            max-height: 175px;
+            min-height: 175px;
+            @include bureau{
+                max-height: 190px;
+                min-height: 190px;
+            }
+        }
+    }
+    .texteFooter{
+        height: 100px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr 1.5fr;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        align-items: end;
+        font-size: .8em;
+        @include bureau{
+            grid-template-rows: 1fr 1fr;
+            font-size: .9em;
+            text-align: left;
+            margin-left: 1%;
+            &:first-child{align-items: center;}
+        }
+
+        &:first-child{
+            align-items: center;
+        }
+
+        .reseaux{
+            display: flex;
+            grid-area: 1/2;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .nomAuteurs{
+            grid-column: 1/1;
+            display: none;
+            @include bureau{
+                display: block;
+            }
+        }
+        .adresse{
+            display: none;
+            p{
+                display: none;
+                padding-right: 2%;
+            }
+            grid-area: 2/2;
+            @include tablette{
+                display: flex;
+                padding-right: 3%;
+                justify-content: right;
+                align-items: flex-end;
+            }
+            @include bureau{
+                p{
+                    display: block;
+                }
+            }
+
+            .piedPageLogo{
+       
+                background-size: 100px 29px;
+                width: 100px;
+                height: 29px;
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+        
+            }
+        }
+        .droitsReserve{
+            font-size: .6em;
+            grid-column: 1/3;
+            grid-row: 2;
+            @include tablette{
+                grid-area: 2/1;
+                font-size: unset;
+            }
+        }
+    }
+    
 }
 
 /* -----------------------------------------------------------------------------
-Les couleurs du mode sombre du footer
+Les couleurs du mode sombre
 ----------------------------------------------------------------------------- */
+.darkmode-layer{
+    background: none !important;
+    mix-blend-mode: normal;
+}
+
 .darkmode--activated{
     & .site-footer{
-        mix-blend-mode: difference;
-        background-color: $color__footer-fond_nuit;
+        //background-color: $color__footer-fond_nuit;
         color: $color__footer-texte_nuit;
+        & svg{
+            fill: $color__footer-fond3_nuit;
+            &:nth-child(2){
+                fill: $color__footer-fond_nuit;
+            }
+            &:nth-child(3){
+                fill: $color__footer-fond2_nuit;
+            }
+        }
     }
 
     & .site-branding{
-        mix-blend-mode: difference;
-        background: linear-gradient(0deg, $color__nav_nuit, $color__header-fond_nuit 30%) bottom;
+       //background: linear-gradient(0deg, $color__nav_nuit, $color__header-fond_nuit 30%) bottom;
     }
+    .site{
+        background-blend-mode: darken;
+        background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond2_nuit.png");         
+    }
+    
+    header svg{
+        fill: $color__header-fond_nuit;
+        &:first-child{
+            fill: $color__header-fond2_nuit;
+        }
+    }
+    .main-navigation svg{
+        fill: $color__nav_nuit;
+    }
+    .couleurArriere{
+        background-color: $color__nav_nuit;
+    }
+    
+}
+.home.darkmode--activated .site, .darkmode--activated .accueil{
+    background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond_nuit.png");
+
 }

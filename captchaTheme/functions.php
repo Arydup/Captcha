@@ -139,7 +139,7 @@ add_action( 'widgets_init', 'under_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function under_scripts() {
+function captcha_scripts() {
 	wp_enqueue_style( 'under-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
 	wp_style_add_data( 'under-style', 'rtl', 'replace' );
@@ -150,7 +150,7 @@ function under_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'under_scripts' );
+add_action( 'wp_enqueue_scripts', 'captcha_scripts' );
 
 /**
  * Implement the Custom Header feature.
