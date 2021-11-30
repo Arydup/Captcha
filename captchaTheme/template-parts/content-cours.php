@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<!-- header class="entry-header" -->
 		<?php 
 		//echo $chaine_titre;
@@ -17,9 +17,22 @@
 	<!--/header> .entry-header -->
 
 	
-	<section class='cours'>
 
-	
+
+	­­<?php
+	$typeCar = substr(get_the_title(),5,1);
+	switch($typeCar){
+		case 'J': $class = 'jeu'; break;
+		case 'W': $class = 'web'; break;
+		case 'P': $class = 'web'; break;
+		case 'N': $class = 'specifique'; break;
+		case 'C': $class = 'specifique'; break;
+		case 'E': $class = 'specifique'; break;
+		case 'M': $class = '2D-3D-video'; break; 
+	} 
+	//echo $class;
+	?> 	
+	<section class='cours affiche-cours <?php echo $class ?>'>
 	<div class="entry-content">
 	<?php 
 	the_title( '<h2><i class="fas fa-video"></i><span>', '</span> </h2>');
@@ -45,4 +58,4 @@
 
 
 	</section>
-</article><!-- #post-<?php the_ID(); ?> -->
+
