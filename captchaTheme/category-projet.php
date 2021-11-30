@@ -22,6 +22,13 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
+			<ol class="pagination">
+				<li><a href="#" class="precedent">Précédent</a></li>
+
+				<li><a href="" class="suivant">Suivant</a></li>
+			</ol
+			
+			>
 			<div class="listeProjets">
 			<?php $chaine_bouton_radio = '';
 			$nombre_projets = 0;
@@ -40,7 +47,6 @@ get_header();
 								 ?>		
 							</section>
 			<?php
-			
 
 			
 			/* Start the Loop */
@@ -56,9 +62,12 @@ get_header();
 				 * 
 				 * https://www.w3schools.com/howto/howto_js_filter_elements.asp
 				 */?>
+				 
+				 
 
 							<?php
 			get_template_part( 'template-parts/content', 'projet' );
+			$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-projets">';
 
 			endwhile;?>
 			<div id="filtres">

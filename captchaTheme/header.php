@@ -22,11 +22,6 @@
 	<?php wp_head(); ?>
 </head>
 
-
-<?php 
-	$darkmodeActive=false; 
-?>
-
 <body <?php body_class();?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site <?php if(get_the_title()==="Accueil"):?>accueil<?php endif;?>" >

@@ -3,38 +3,107 @@
  * Modification de la page projet
  ******************************************************************************/
  .projet{
-    margin: 1em;
-    margin: 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    width: 300px;
-    height: 200px;
-    background-color: aquamarine;
-    
-    & p{
-        text-align: center;
-    }
+     padding: 10px;
+    //width: 100%;
+    //margin: 1em;
+    //margin: 2px;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
+    //justify-content: center;
+    //border: 1px solid black;
+    border-radius: 5px;
+    //width: 300px;
+    //height: 200px;
+    display: inline-grid;
+    //gap : 5px;
+    //grid-template-rows: 50% 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 80% 1fr ;
 
-    & img{
+    img:first-child{
+        border-radius: 5px;
+        display: block;
+        margin: 5% auto;
+        width: 90%;
+        height: auto;
+        grid-column: 1/3;
+    }
+    .imageLogo{
         display: block;
         margin: 0 auto;
-        width: 70%;
+        width: 60px;
         height: auto;
+        grid-row: 2/4;
+        grid-column: 2/3;
     }
+
+    .descriptionProjet{
+        grid-column: 1/3;
+        text-align: center; 
+        margin: 10px 0;
+    }
+
+    @include tablette{
+        grid-template-columns: 30% 60% 10%;
+        //text-align: bottom end;
+        //grid-template-columns: 1fr 60%;
+        .imageLogo{
+            grid-row: 1/3;
+            grid-column: 3/4;
+        }
+        //flex-direction: row;
+        //align-items: flex-start;
+        //justify-content: flex-start;
+        img:first-child{
+            //height: 100%;
+            //padding-right: 10px;
+            object-fit: contain;
+            width: 100%;
+            grid-row: 1/5;
+            grid-column: 1;
+        }
+        .descriptionProjet{
+            grid-column: 2/4;
+        }
+        .typeCoursProjet{
+            grid-column: 3;
+            align-self:flex-end;
+            text-align: right;
+        }
+        p, h3{
+            padding-left: 10px;
+        }
+    }
+   
 }
+
 #filtres{
     display: flex;
     flex-direction: column;
 }
 
 .listeProjets{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: center;
+    //align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    @include tablette{
+        width: 90%;
+    }
+
+    article{
+        &:nth-child(odd) .projet{
+            background-image: linear-gradient($color__projet-gratient1, $color__projet-gratient2);
+        }
+        &:nth-child(even) .projet{
+            background-image: linear-gradient($color__projet-gratient1, $color__projet-gratient3);
+        }
+        @include tablette{
+            margin: 0 0 5% 0;
+        }
+    }
 }
 
 /* -----------------------------------------------------------------------------
@@ -55,6 +124,43 @@ Sélecteurs pour les boutons
         color: rgb(255, 255, 255);       
     }
 }
+
+/* -----------------------------------------------------------------------------
+Sélecteurs pour le carroussel - nouvel ajout
+----------------------------------------------------------------------------- */
+.ctrl-carrousel {
+    display : flex;
+    justify-content: center;
+    width : 100vw;
+    .rad-carrousel {
+        display : block;
+        margin : .5rem .8rem .5rem .8rem; 
+
+    &:nth-of-type(4){
+        display : none;
+    } 
+    &:nth-of-type(5){
+        display : none;
+    } 
+    &:nth-of-type(6){
+        display : none;
+    } 
+    
+    }
+}
+/* -----------------------------------------------------------------------------
+Sélecteurs pour les media queries sur tablette
+----------------------------------------------------------------------------- */
+@include tablette{
+
+}
+/* -----------------------------------------------------------------------------
+Sélecteurs pour les media queries sur un ordinateur
+----------------------------------------------------------------------------- */
+@include bureau{
+    
+}
+
 /* -----------------------------------------------------------------------------
 Sélecteurs pour le mode sombre
 ----------------------------------------------------------------------------- */
