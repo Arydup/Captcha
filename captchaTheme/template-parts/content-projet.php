@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="<?php echo get_field('type_de_cours'); ?>"<?php post_class();?>>
 	
 	<section class='projet'>
 		<?php echo the_post_thumbnail();?>

@@ -22,19 +22,21 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<ol class="pagination">
-				<li><a href="#" class="precedent">Précédent</a></li>
+			<!--À implémenter si plus de 15 projets (par page) + modifer post_per_page
 
-				<li><a href="" class="suivant">Suivant</a></li>
-			</ol
-			
-			>
-			<div class="listeProjets">
-			<?php $chaine_bouton_radio = '';
+			$category = get_category($id);
+			$count = $category->category_count;
+
+			if( $count > $something ) {
+
+				// stuff
+			} 
+		-->
+		<?php $chaine_bouton_radio = '';
 			$nombre_projets = 0;
 			?>
-		
-			<section class="ctrl-chiffre">
+
+		<section class="ctrl-chiffre">
 				<a href="#" class="precedent">Précédent</a>
 				<?php for ($x = 0; $x <= 2; $x++) {?>
 			<button><?= $x+1; ?></button>
@@ -45,7 +47,51 @@ get_header();
 								$chaine_bouton_radio = '';
 								$chaine_bouton_radio .= '<button class="boutons-chiffre">';
 								 ?>		
-							</section>
+			</section>
+
+
+			<ol class="pagination">
+				<li><a href="#" class="precedent">Précédent</a></li>
+
+				<li><a href="" class="suivant">Suivant</a></li>
+			</ol
+			
+			>
+
+			<div id="filtres">
+				<div>
+				<!--php foreach type_de_cours-->
+				<input type="checkbox" id="checkbox3D"
+				name="logiciels" value="3D" onclick="valider3D()">
+				<label for="3D">3D</label>
+				</div>
+
+				<div>
+				<input type="checkbox" id="checkboxWeb"
+				name="logiciels" value="web">
+				<label for="web">Web</label>
+				</div>
+
+				<div>
+				<input type="checkbox" id="checkboxJeu"
+				name="logiciels" value="jeu">
+				<label for="jeu">Jeu</label>
+				</div>
+
+				<div>
+				<input type="checkbox" id="session1"
+				name="session" value="1">
+				<label for="session1">Session1</label>
+				</div>
+
+
+
+
+
+
+
+			<div class="listeProjets">
+
 			<?php
 
 			
@@ -63,38 +109,18 @@ get_header();
 				 * https://www.w3schools.com/howto/howto_js_filter_elements.asp
 				 */?>
 				 
-				 
+				 <!--
+				 <section class="ctrl-carrousel">
+								<?php //echo $chaine_bouton_radio;
+								//$chaine_bouton_radio = '';
+								 ?>		
+				</section>-->
 
 							<?php
 			get_template_part( 'template-parts/content', 'projet' );
-			$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-projets">';
+			//$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-projets">';
 
 			endwhile;?>
-			<div id="filtres">
-				<div>
-				<input type="checkbox" id="3D"
-				name="logiciels" value="3D">
-				<label for="3D">3D</label>
-				</div>
-
-				<div>
-				<input type="checkbox" id="web"
-				name="logiciels" value="web">
-				<label for="web">Web</label>
-				</div>
-
-				<div>
-				<input type="checkbox" id="jeu"
-				name="logiciels" value="jeu">
-				<label for="jeu">Jeu</label>
-				</div>
-
-				<div>
-				<input type="checkbox" id="session1"
-				name="session" value="1">
-				<label for="session1">Session1</label>
-				</div>
-
 
 				<button class="btn active" onclick="filterSelection('all')"> Show all</button>
 				<button class="btn" onclick="filterSelection('cars')"> Cars</button>
