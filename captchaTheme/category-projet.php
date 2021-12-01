@@ -17,8 +17,8 @@ get_header();
 
 			<header class="page-header">
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
+				//the_archive_title( '<h1 class="page-title">', '</h1>' );
+				//the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
 
@@ -59,8 +59,24 @@ get_header();
 			>
 
 			<div id="filtres">
+				
+
+				<?php
+				$typeCours = ['Web', 'Jeu', '3D', 'Video', 'Design'];
+
+				
+					for($i=0; $i<count($typeCours); $i++):?>
+						<div>
+						<input type="checkbox" id="checkbox<?php echo $typeCours[$i]?>"
+						name="logiciels" value="<?php echo $typeCours[$i]?>" onclick="validerCours()">
+						<label for="<?php echo $typeCours[$i]?>"><?php echo $typeCours[$i]?></label>
+						</div>
+					<?php endfor;?>
+
 				<div>
 				<!--php foreach type_de_cours-->
+				
+<!--
 				<input type="checkbox" id="checkbox3D"
 				name="logiciels" value="3D" onclick="valider3D()">
 				<label for="3D">3D</label>
@@ -83,8 +99,8 @@ get_header();
 				name="session" value="1">
 				<label for="session1">Session1</label>
 				</div>
-
-
+					-->
+				</div>
 
 
 
@@ -121,17 +137,10 @@ get_header();
 			//$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-projets">';
 
 			endwhile;?>
-
-				<button class="btn active" onclick="filterSelection('all')"> Show all</button>
-				<button class="btn" onclick="filterSelection('cars')"> Cars</button>
-				<button class="btn" onclick="filterSelection('animals')"> Animals</button>
-				<button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-				<button class="btn" onclick="filterSelection('colors')"> Colors</button>
 			</div>
 			<?php
 		endif;
 		?>
-		 </div>
 
 
 	</main><!-- #main -->
