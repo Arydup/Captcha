@@ -14,7 +14,7 @@
  * AFFICHAGE DES ARTICLES/CARTES ENSEIGNANTS DANS LA PAGE
  ******************************************************************************/
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="Enseignants" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <section class='enseignants'>
 		<?php echo the_post_thumbnail();?>
 		<?php the_title( '<h3>', '</h3>' );?>		

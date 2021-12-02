@@ -22,11 +22,6 @@
 	<?php wp_head(); ?>
 </head>
 
-
-<?php 
-	$darkmodeActive=false; 
-?>
-
 <body <?php body_class();?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site <?php if(get_the_title()==="Accueil"):?>accueil<?php endif;?>" >
@@ -61,7 +56,7 @@
 
 			<!--Le toggle du mode sombre-->
 			<label class="modeSombre">
-				<input id="modeSombre" class="modeSombre-checkbox" type="checkbox" onclick="darkmode.toggle();">
+				<input class="modeSombre-checkbox" type="checkbox" onclick="darkmode.toggle();">
 				<!--<php? if(darkmode.toogle){#modeSombre.checked}>-->
 				<div class="modeSombreToggle"></div>
 			</label>

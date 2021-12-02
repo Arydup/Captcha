@@ -31,10 +31,12 @@ get_header();
 			<hr class="ligne"> </hr>
 
 			<nav class='session_cours'> <!-- Sous menu des sessions -->
-				<a href="#">Design</a>
-				<a href="#">Web</a>
-				<a href="#">Vidéo</a>
-				<a href="#">Jeu</a>
+				<a href="#" class='tous'>Tous</a>
+				<a href="#" class='2D-3D-video'>2D/3D/Video</a>
+				<a href="#"class='web'>Web</a>
+				­<!--<a href="#">Vidéo</a>-->
+				<a href="#"class='jeu'>Jeu</a>
+				<a href="#"class='specifique'>Spécifique</a>
 			</nav>
 			<hr class="lignedeux"> </hr>
 
@@ -60,7 +62,7 @@ get_header();
 
 		endif;
 		?>
-
+	
 
 	</main><!-- #main -->
 

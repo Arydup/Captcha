@@ -11,8 +11,6 @@
     margin-left: 50px;
     margin-right: 50px;
     
-    
-    
 }
 
 
@@ -57,17 +55,23 @@
     & img{
         display: block;
         margin: 0 auto;
-        width: 70%;
-        height: 70%;
+        width: 60%;
+        height: 60%;
         border-radius: 20%;
+        
     }
 }
 
 .enseignants:hover{
-    background-color: brown;
-    p:hover{
-        color: brown;
-    }
+    box-shadow:
+                2px 2px #29ABE2,
+                3px 3px #29ABE2,
+                4px 4px #29ABE2;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    
+    background-color: #B4CDFF;
+    cursor: pointer;
 }
 
 /*******************************************************************************
@@ -76,11 +80,9 @@
  
 .InfoEnseignants{
    
-    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 0;
-    width: 50vw;
-    height: 50vh;
+    width: 95vw;
+    height: 55vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,38 +90,74 @@
     transition: 0.3s ease;
     opacity: 0;
     z-index: -1;
-    background-color: #FFF;
-    width: 65vw;
-    height: 55vh;
-    display: flex;
     flex-direction: column;
+    border-radius: 10%;
+    background: rgb(255,225,254);
+    background: linear-gradient(180deg, rgba(255,225,254,1) 0%, rgba(220,149,215,1) 100%);
+
+    & img{
+        display: block;
+        margin: 0 auto;
+        border-radius: 20%;
+        height: 25vh;
+        width: auto;
+        
+    }
+    
 }
 
 .InfoEnseignants .carteInfo{
     position: relative;
-    background-color: #FFF;
     width: 65vw;
     height: 55vh;
     display: flex;
     flex-direction: column;
 }
 
-.InfoEnseignants .carteInfo .bouton-fermeture{
+.InfoEnseignants .bouton-fermeture{
     position: absolute;
-    top: -25px;
-    right: -25px;
+    top: 10px;
+    right: 10px;
     width: 40px;
     height: 40px;
     padding: 25px;
-    border-radius: 50px;
     text-align: center;
-    background-color: #f8d4f0;
-    border: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s ease-in-out;
+    background-color: red;
 }
+
+.InfoEnseignants .bouton-fermeture:hover{
+
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.InfoEnseignants .bouton-fermeture:active{
+
+    
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.InfoEnseignants .bouton-fermeture::after{
+
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    
+
+}
+
 
 .InfoEnseignants::-webkit-scrollbar {
     width: 5px;
@@ -140,7 +178,7 @@
       
     }
 
-	.enseignants{
+	.enseignantsCartes{
         background-color:#FFE1FE;;
         width: 100%;
         height: 100%;
