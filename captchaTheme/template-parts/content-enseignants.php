@@ -28,11 +28,17 @@
 ?>
 <section class='InfoEnseignants'>
 		<div class="bouton-fermeture">
-			<h2>X</h2>
+		<button id='work' type="button" name="Hover">X</button>
 		</div>
-			<div class="nomProf"><p><?php the_title( '<h3>', '</h3>' );?></p></div>
-			<div class="Cours"><p><?php echo get_field('type_de_cours_donnes')?></p></div>
+
 			<div class="photoProf"><?php echo the_post_thumbnail();?></div>
-			<p><?php echo get_field('description_de_lenseignants');?></p>
+			<div class="infoGeneralProf">
+				<div class="nomProf"><p><?php the_title( '<h3>', '</h3>' );?></p></div>
+				<div class="Cours"><p><?php echo get_field('type_de_cours_donnes')?></p></div>
+				<div class="DescriptionEnseignant"><p><?php echo get_field('description_de_lenseignant');?></p></div>
+			</div>
+		
+			
+			
 </section>		
 
