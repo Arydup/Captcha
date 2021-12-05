@@ -1,12 +1,385 @@
+/*******************************************************************************
+ * CSS POUR LE MODE MOBILE
+ ******************************************************************************/ 
 
+/*******************************************************************************
+ * CSS POUR LE CONTENEUR DE TOUTES LES CARTES ENSEIGANTS.
+ ******************************************************************************/
 .EnseignantsScroll{
   
-    height: 55vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 60vh;
+    margin-right: 50px;
+    gap: 20px 20px;    
+}
+
+/*******************************************************************************
+ * CSS POUR LA BARRE DE SCROLL PRÉSENTE DANS LA PAGE ENSEIGNANTS
+ ******************************************************************************/
+.EnseignantsScroll::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+  }
+  
+  
+  /* Track */
+  .EnseignantsScroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  .EnseignantsScroll::-webkit-scrollbar-thumb {
+    background: rgb(95, 95, 95);
+    border-radius: 10px;
+  }
+
+  /*******************************************************************************
+ * CSS POUR CHAQUE CARTE ENSEIGNANTS
+ ******************************************************************************/
+  .EnseignantsGlobal{
+      margin-right: 170px;
+  }
+
+.enseignants{
+    background-color:rgb(255,225,254);
+    width: 170%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    border-radius: 25%;
+    
+
+    & img{
+        display: block;
+        width: 40%;
+        height: 80%;
+        border-radius: 30%;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+}
+
+.enseignants h3{
+    margin-top: 25px;
+    font-size: 0.8em;
+}
+
+/*******************************************************************************
+ * CSS POUR LE HOVER SUR LES CARTE ENSEIGNANTS
+ ******************************************************************************/
+ .enseignants:hover{
+    box-shadow:
+                2px 2px #29ABE2,
+                3px 3px #29ABE2,
+                4px 4px #29ABE2;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    
+    background-color: #B4CDFF;
+    cursor: pointer;
+}
+
+ /*******************************************************************************
+ * CSS POUR CHAQUE CARTES QUI MONTRE PLUS D'INFO SUR LES ENSEIGNANTS.
+ ******************************************************************************/
+
+.InfoEnseignants{
+   
+    position: absolute;
+    margin-left: 10px;
+    width: 95vw;
+    height: 57vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    transition: 0.3s ease;
+    opacity: 0;
+    z-index: -1;
+    flex-direction: column;
+    border-radius: 10%;
+    background: linear-gradient(180deg, rgba(255,225,254,1) 0%, rgba(220,149,215,1) 100%);
+
+    
+
+    & img{
+        
+        margin-bottom: 10px;
+        margin-top: 15px;
+        border-radius: 20%;
+        height: 20vh;
+        width: auto;
+        box-shadow: -5px -5px 30px 5px $color__nav, 5px 5px 30px 5px $color__header-fond2;
+    }
+    
+}
+
+ /*******************************************************************************
+ * CSS POUR LE NOM ET COURS DES PROFS
+ ******************************************************************************/
+
+.InfoEnseignants .infoGeneralProf{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 60%;
+    height: 55%;
+    font-size: 0.8em;
+    
+}
+
+ /*******************************************************************************
+ * CSS POUR LA DESCRIPTION DES PROFS.
+ ******************************************************************************/
+
+.InfoEnseignants .DescriptionEnseignant{
+
+    height: 500px;
+    overflow-y: scroll;
+    margin-top: 10px;
+    
+    p{
+       padding-right: 10px;
+    }
+    
+}
+
+/*******************************************************************************
+ * CSS POUR LA SCROLLBAR QUI PERMET DE LIRE PLUS DE LA DESCRIPTION
+ ******************************************************************************/
+.InfoEnseignants .DescriptionEnseignant::-webkit-scrollbar{
+    width: 6px;
+  }
+
+.InfoEnseignants .DescriptionEnseignant::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+.InfoEnseignants .DescriptionEnseignant::-webkit-scrollbar-thumb {
+    background: rgb(95, 95, 95);
+    border-radius: 10px;
+  }
+
+  /*******************************************************************************
+ * CSS POUR LE BOUTON FERMETURE DES CARTES
+ ******************************************************************************/
+.InfoEnseignants .bouton-fermeture{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B4CDFF;
+    border-radius: 40%;
+    border: none;
+    cursor: pointer;
+}
+
+.InfoEnseignants .bouton-fermeture:hover{
+
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px $color__header-fond2;
+}
+
+.InfoEnseignants .bouton-fermeture:active{
+
+    
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px $color__header-fond2;
+    
+}
+
+.InfoEnseignants .bouton-fermeture::after{
+
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    
+
+}   
+
+
+
+
+/*******************************************************************************
+ * CSS POUR LE MODE TABLETTE
+ ******************************************************************************/ 
+@include tablette{
+
+    /*******************************************************************************
+ * CSS POUR CHAQUE CARTES QUI MONTRE PLUS D'INFO SUR LES ENSEIGNANTS.
+ ******************************************************************************/
+
+.InfoEnseignants{
+    height: 65vh;
+}
+
+/*******************************************************************************
+ * CSS POUR LA BARRE DE SCROLL PRÉSENTE DANS LA PAGE ENSEIGNANTS
+ ******************************************************************************/
+.EnseignantsScroll::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /*******************************************************************************
+ * CSS POUR CHAQUE CARTE ENSEIGNANTS
+ ******************************************************************************/
+  .EnseignantsGlobal{
+      margin-right: 170px;
+  }
+
+.enseignants{
+    
+    width: 120%;
+   
+
+    & img{
+        border-radius: 30%;
+        margin-top: 20px;
+        
+    }
+
+}
+
+.enseignants h3{
+    margin-top: 75px;
+    margin-left: 50px;
+    font-size: 1.5em;
+}
+
+ /*******************************************************************************
+ * CSS POUR CHAQUE CARTES QUI MONTRE PLUS D'INFO SUR LES ENSEIGNANTS.
+ ******************************************************************************/
+
+.InfoEnseignants{
+   
+    
+    & img{
+        
+        margin-top: 25px;
+        height: 25vh;
+        
+    }
+    
+}
+
+/*******************************************************************************
+ * CSS POUR LE HOVER SUR LES CARTE ENSEIGNANTS
+ ******************************************************************************/
+ .enseignants:hover{
+    box-shadow:
+                2px 2px #29ABE2,
+                3px 3px #29ABE2,
+                4px 4px #29ABE2;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    
+    background-color: #B4CDFF;
+    cursor: pointer;
+}
+
+ /*******************************************************************************
+ * CSS POUR LE NOM ET COURS DES PROFS
+ ******************************************************************************/
+
+.InfoEnseignants .infoGeneralProf{
+    
+    font-size: 1em;
+    
+}
+
+  /*******************************************************************************
+ * CSS POUR LE BOUTON FERMETURE DES CARTES
+ ******************************************************************************/
+.InfoEnseignants .bouton-fermeture{
+    position: absolute;
+    top: 10px;
+    //right: 10px;
+    width: 70px;
+    height: 70px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B4CDFF;
+    border-radius: 40%;
+    border: none;
+    margin-right: 10px;
+    margin-top: 10px;
+    
+}
+
+.InfoEnseignants .bouton-fermeture:hover{
+
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px $color__header-fond2;
+}
+
+.InfoEnseignants .bouton-fermeture:active{
+
+    
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px $color__header-fond2;
+    
+}
+
+.InfoEnseignants .bouton-fermeture::after{
+
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    
+
+}   
+
+}
+/*******************************************************************************
+ * CSS POUR LE MODE BUREAU
+ ******************************************************************************/
+
+@include bureau{
+
+    /*******************************************************************************
+ * CSS POUR LE CONTENEUR DE TOUTES LES CARTES ENSEIGANTS.
+ ******************************************************************************/
+.EnseignantsScroll{
+  
+    
     display: grid;
     grid-template-rows: auto auto;
     grid-auto-flow: column;
     overflow-x: scroll;
     overflow-y: hidden;
+    height: 55vh;
     column-gap: 50px;
     margin-left: 50px;
     margin-right: 50px;
@@ -14,24 +387,19 @@
     
 }
 
-
+/*******************************************************************************
+ * CSS POUR LA BARRE DE SCROLL PRÉSENTE DANS LA PAGE ENSEIGNANTS
+ ******************************************************************************/
 .EnseignantsScroll::-webkit-scrollbar {
   height: 8px;
 }
 
-
-/* Track */
-.EnseignantsScroll::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
+/*******************************************************************************
+ * CSS POUR CHAQUE CARTE ENSEIGNANTS
+ ******************************************************************************/
+ .EnseignantsGlobal{
+    margin-right: 0px;
 }
-
-/* Handle */
-.EnseignantsScroll::-webkit-scrollbar-thumb {
-  background: rgb(95, 95, 95);
-  border-radius: 10px;
-}
-
 
 .enseignants{
     position: relative;
@@ -49,10 +417,6 @@
     margin-left: 100px;
     margin-right: 100px;
     
-    
-    & p{
-        text-align: center;
-    }
 
     & img{
         display: block;
@@ -64,6 +428,51 @@
     }
 }
 
+.enseignants h3{
+    
+   font-size: 1em;
+   margin: 0 auto;
+}
+ 
+/*******************************************************************************
+ * CSS POUR CHAQUE CARTES QUI MONTRE PLUS D'INFO SUR LES ENSEIGNANTS.
+ ******************************************************************************/
+.InfoEnseignants{
+   
+    position: absolute;
+    width: 95vw;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    transition: 0.3s ease;
+    opacity: 0;
+    z-index: -1;
+    flex-direction: row;
+    border-radius: 10%;
+    background: rgb(255,225,254);
+    background: linear-gradient(180deg, rgba(255,225,254,1) 0%, rgba(220,149,215,1) 100%);
+
+    
+
+    & img{
+        display: block;
+        margin-top: -200px;
+        border-radius: 20%;
+        height: 30vh;
+        width: auto;
+        margin-right: 200px;
+        margin-top: 15px;
+        box-shadow: -5px -5px 30px 5px $color__nav, 5px 5px 30px 5px $color__header-fond2;
+        z-index: 1000;
+        position: relative;
+    }
+    
+}
+/*******************************************************************************
+ * CSS POUR LE HOVER SUR LES CARTE ENSEIGNANTS
+ ******************************************************************************/
 .enseignants:hover{
     box-shadow:
                 2px 2px #29ABE2,
@@ -75,6 +484,62 @@
     background-color: #B4CDFF;
     cursor: pointer;
 }
+
+/*.enseignants:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.enseignants:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #FFE1FE;
+    color: rgb(0, 0, 0);
+}
+
+.enseignants::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #FFE1FE;
+}
+
+.enseignants:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}*/
+
+
 
 /*******************************************************************************
  * CARTE D'INFORMATIONS DES PROFS
@@ -108,10 +573,14 @@
         margin-right: 200px;
         margin-top: 15px;
         box-shadow: -5px -5px 30px 5px $color__nav, 5px 5px 30px 5px $color__header-fond2;
-        
+        z-index: 1000;
+        position: relative;
     }
     
 }
+/*******************************************************************************
+ * CSS POUR LE NOM ET COURS DES PROFS
+ ******************************************************************************/
 
 .InfoEnseignants .infoGeneralProf{
     display: flex;
@@ -123,6 +592,9 @@
     
 }
 
+ /*******************************************************************************
+ * CSS POUR LA DESCRIPTION DES PROFS.
+ ******************************************************************************/
 .InfoEnseignants .DescriptionEnseignant{
 
     height: 300px;
@@ -135,125 +607,28 @@
     }
     
 }
-
-.InfoEnseignants .DescriptionEnseignant::-webkit-scrollbar{
-    width: 6px;
-  }
-
-.InfoEnseignants .DescriptionEnseignant::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-  }
-
-.InfoEnseignants .DescriptionEnseignant::-webkit-scrollbar-thumb {
-    background: rgb(95, 95, 95);
-    border-radius: 10px;
-  }
-
+ /*******************************************************************************
+ * CSS POUR LE BOUTON FERMETURE DES CARTES
+ ******************************************************************************/
 .InfoEnseignants .bouton-fermeture{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    padding: 25px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-}
 
-.InfoEnseignants .bouton-fermeture:hover{
-
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.InfoEnseignants .bouton-fermeture:active{
-
-    
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    
-}
-
-.InfoEnseignants .bouton-fermeture::after{
-
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-    
-
-}
-
-  
-
-@media (max-width:1025px){
-
-    .EnseignantsScroll{
-  
-       display: flex;
-       flex-direction: column;
-       overflow-y: scroll;
-       overflow-x: hidden;
-       margin-left: 0px;
-        margin-right: 50px;
-        margin-top: 100px;
-      
-    }
-
-	.enseignantsCartes{
-        background-color:#FFE1FE;;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        margin-left: 100px;
-        margin-right: 100px;
-
-        & img{
-            display: block;
-            margin: 0 auto;
-            width: 40%;
-            height: 80%;
-            border-radius: 20%;
-            margin-left: 20px;
-            margin-right: 30px;
-        }
-        
-    }
-
-
-    .InfoEnseignants{
-     
-        width: 800px;
-        height: 240px;
-       
-        
-      
-        
-    }
-
+    margin-right: 20px;
+    margin-top: 20px;
     
 }
 
 
+}
+ /*******************************************************************************
+ * CSS POUR LE MODE sombre
+ ******************************************************************************/
 .darkmode--activated{
     & .enseignants{
         background-color: $color__enseignants-nuit;
         color: $color__enseignants-texte;
     }
     & .InfoEnseignants{
-        background-color: $color__enseignants-nuit;
+        background: $color__enseignants-nuit;
 
         p{
             color: $color__enseignants-texte;
@@ -264,4 +639,32 @@
     
 }
 
+/*.shape{
+    position: absolute;
+    background: linear-gradient(45deg, #efbfff 0%, #97afff 100%);
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 400px;
+    transition: all 1s ease-in-out;
+    width: 550px;
+    margin-top: -350px;
+    margin-left: -60px;
+    z-index: 5;
+}
 
+@keyframes morph {
+    0% {
+              border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+              background: linear-gradient(45deg, #efbfff 0%, #97afff 100%);
+      } 
+      
+      50% {
+              border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+              background: linear-gradient(45deg, #b4cdff 0%, #97afff 100%);
+      }
+    
+      100% {
+          border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+          background: linear-gradient(45deg, #efbfff 0%, #97afff 100%);
+      } 
+  }*/
