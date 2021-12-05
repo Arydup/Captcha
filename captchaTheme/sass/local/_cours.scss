@@ -22,7 +22,10 @@
     margin: 5px 68px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: concert one, cursive;
+    color: lightpink;
+    text-shadow: black 2px 2px;
 }
 
 .ligne {                        /*-------------Ligne rose-------------------*/
@@ -36,6 +39,7 @@
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: black 2px 2px 8px;
 
 }
 
@@ -56,7 +60,14 @@
     font-size: 25px;
     font-family: concert one, cursive;
     color: lightpink;
-    text-shadow: black 2px 2px;
+    text-shadow: black 2px 2px; 
+}
+.session_cours a:hover{
+    background-color: rgb(135, 206, 250);
+}
+.session_cours a:active{
+    background-color: black;
+    color: rgb(135, 206, 250);
 }
 
 .lignedeux {                    /*-------------Ligne bleu----------------------*/
@@ -125,7 +136,9 @@
     
         p{
             text-align: justify;
-            font-size: 20px;
+            font-size: 15px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
         }
     }
 
@@ -139,14 +152,14 @@
         font-weight: bold;
         font-size: 20px;
         padding-left: 10px;
-        
+        text-shadow: 2px 2px 2px black;
     }
     }
 
 }
 
 .cours img {
-    margin: 10px;
+    margin: 20px;
     height: 200px;
     
 }
@@ -174,7 +187,7 @@
     border: dashed 3px black;
     box-shadow: 5px 5px 20px  rgb(135, 206, 250);
     //box-shadow: 5px 5px 5px;
-    height: 700px;
+    height: 500px;
 }
 
 
@@ -191,4 +204,51 @@ figure a
     -webkit-text-stroke-color: black;
     text-shadow: 5px 5px 8px black;
 }
+/*------------------------------mode nuit---------------------------------*/
+.darkmode--activated .affiche-cours{
+    background-color: #1E0874;
+    border: dashed 3px white;
+}
+.darkmode--activated .ligne{
+    border-color: #1E0874;;
+    background-color:#1E0874;
+    box-shadow: white 2px 2px 8px;
+}
+.darkmode--activated .lignedeux{
+    border-color: #4429AA;
+    background-color:#4429AA;
+    box-shadow: white 2px 2px 8px;
+}
 
+.darkmode--activated .session_cours a:hover{
+    background-color: black;
+}
+.darkmode--activated .session_cours a:active{
+    background-color: black;
+    color: #4429AA;
+}
+.darkmode--activated .session a{
+
+    font-family: concert one, cursive;
+    color: rgb(213, 209, 216);
+    text-shadow:black 2px 2px;
+
+}
+.darkmode--activated .session_cours a{
+
+    font-family: concert one, cursive;
+    color: rgb(213, 209, 216);
+    text-shadow: black 2px 2px;
+}
+.darkmode--activated .site-main{
+    background-color: #3b15c4; 
+}
+
+/*---------------------------------mobile---------------------------------*/
+@include tablette {
+
+    .affiche-cours{
+      //float: none;
+    }
+    
+  }
