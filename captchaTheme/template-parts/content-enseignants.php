@@ -14,10 +14,12 @@
  * AFFICHAGE DES ARTICLES/CARTES ENSEIGNANTS DANS LA PAGE
  ******************************************************************************/
 ?>
-<article class="Enseignants" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<section class='enseignants'>
+<article class="EnseignantsGlobal" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<section class='enseignants btn-white btn-animate'>
+	
 		<?php echo the_post_thumbnail();?>
-		<?php the_title( '<h3>', '</h3>' );?>		
+		<?php the_title( '<h3>', '</h3>' );?>
+		
 </section>	
 </article><!-- #post-<?php the_ID(); ?> -->
 
@@ -27,15 +29,17 @@
  ******************************************************************************/
 ?>
 <section class='InfoEnseignants'>
-		<div class="bouton-fermeture">
-		<button id='work' type="button" name="Hover">X</button>
-		</div>
+		
+		<button  class="bouton-fermeture">X</button>
+		
 
-			<div class="photoProf"><?php echo the_post_thumbnail();?></div>
+			<div class="photoProf"><?php echo the_post_thumbnail();?>
+			<div class="shape"></div>
+			</div>
 			<div class="infoGeneralProf">
 				<div class="nomProf"><p><?php the_title( '<h3>', '</h3>' );?></p></div>
 				<div class="Cours"><p><?php echo get_field('type_de_cours_donnes')?></p></div>
-				<div class="DescriptionEnseignant"><p><?php echo get_field('description_de_lenseignant');?></p></div>
+				<div class="DescriptionEnseignant"><p><?php echo get_field('description_de_lenseignants');?></p></div>
 			</div>
 		
 			
