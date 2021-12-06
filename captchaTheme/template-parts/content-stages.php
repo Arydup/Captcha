@@ -1,6 +1,6 @@
 <article class="stagePartie" >
     <section class="stagePhoto">
-d
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Novartis_Barcelona.jpg/640px-Novartis_Barcelona.jpg" alt="">
     </section>
 <section class="stageTexte">
 <!-- <div class="wp-block-column" style="flex-basis:66.66%"> -->
@@ -22,7 +22,8 @@ d
 <br>
 <article class="stagePartie" >
     <section class="stagePhoto">
-d
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Novartis_Barcelona.jpg/640px-Novartis_Barcelona.jpg" alt="">
+
     </section>
 <section class="stageTexte">
 <div class="wp-block-column" style="flex-basis:66.66%">
