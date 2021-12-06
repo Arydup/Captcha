@@ -15,15 +15,20 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php
+	<?php
 		while ( have_posts() ) :
 			the_post();
 
 			if(get_the_title()==="Accueil"):
 				get_template_part( 'template-parts/content', 'accueil' );
-			
+			elseif(get_the_title()==="Stages"):
+				get_template_part( 'template-parts/content', 'stages' );
+			elseif(get_the_title()==="Avenir"):
+				get_template_part( 'template-parts/content', 'avenir' );
+			elseif(get_the_title()==="Vie étudiante"):
+				get_template_part( 'template-parts/content', 'vies' );
 			else :
 				get_template_part( 'template-parts/content', 'page' );
 			endif;
@@ -36,7 +41,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
 get_sidebar();
