@@ -8,7 +8,6 @@
  *
  * @package underscore
  */
-
 ?>
 
 <!doctype html>

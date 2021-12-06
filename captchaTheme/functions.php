@@ -205,3 +205,25 @@ function extraire_article_cours($query) {
     }  
 }
 add_action( "pre_get_posts", "extraire_article_cours" );
+
+/*
+function cookies_auteurProjet($nomAuteur) {  
+	$auteurProjet = $nomAuteur;  
+	if(!isset($_COOKIE[$auteurProjet])) {
+	setcookie('auteurProjet', $auteurProjet, time()+86400); 
+	}
+}
+
+function get_cookie($auteurProjet) { 
+	if(isset($_COOKIE['auteurProjet'])) {
+	function placeholder() {
+	}
+	}
+}*/
+/*
+function cookies_auteurProjet() {  
+	$auteurProjet = '';  
+	if(!isset($_COOKIE[$auteurProjet])) {
+	setcookie('auteurProjet', $auteurProjet, time()+86400); 
+	}
+}*/
