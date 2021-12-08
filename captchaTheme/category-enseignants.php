@@ -51,7 +51,9 @@ get_header();
 			
 			</section>
 			
-
+			<section class="AnimationBulle">
+			<div class="shape"></div>
+			</section>
 			
 
 			<?php

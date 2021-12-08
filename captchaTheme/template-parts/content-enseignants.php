@@ -31,18 +31,14 @@
 <section class='InfoEnseignants'>
 		
 		<button  class="bouton-fermeture">X</button>
-		
-
 			<div class="photoProf"><?php echo the_post_thumbnail();?>
-			<div class="shape"></div>
 			</div>
 			<div class="infoGeneralProf">
 				<div class="nomProf"><p><?php the_title( '<h3>', '</h3>' );?></p></div>
 				<div class="Cours"><p><?php echo get_field('type_de_cours_donnes')?></p></div>
 				<div class="DescriptionEnseignant"><p><?php echo get_field('description_de_lenseignants');?></p></div>
-			</div>
-		
-			
-			
-</section>		
+			</div>	
+</section>	
+
+
 
