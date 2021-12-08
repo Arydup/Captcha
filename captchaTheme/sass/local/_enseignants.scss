@@ -13,7 +13,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     height: 60vh;
-    margin-right: 50px;
+    margin-right: 75px;
     gap: 20px 20px;    
 }
 
@@ -103,7 +103,7 @@
     color: #000;
     transition: 0.3s ease;
     opacity: 0;
-    z-index: -1;
+    z-index: -10;
     flex-direction: column;
     border-radius: 10%;
     background: linear-gradient(180deg, rgba(255,225,254,1) 0%, rgba(220,149,215,1) 100%);
@@ -187,6 +187,8 @@
     border-radius: 40%;
     border: none;
     cursor: pointer;
+    font-size: 25px;
+    
 }
 
 .InfoEnseignants .bouton-fermeture:hover{
@@ -371,6 +373,8 @@
     /*******************************************************************************
  * CSS POUR LE CONTENEUR DE TOUTES LES CARTES ENSEIGANTS.
  ******************************************************************************/
+
+ 
 .EnseignantsScroll{
   
     
@@ -448,7 +452,7 @@
     color: #000;
     transition: 0.3s ease;
     opacity: 0;
-    z-index: -1;
+    z-index: -10;
     flex-direction: row;
     border-radius: 10%;
     background: rgb(255,225,254);
@@ -556,7 +560,7 @@
     color: #000;
     transition: 0.3s ease;
     opacity: 0;
-    z-index: -1;
+    z-index: -10;
     flex-direction: row;
     border-radius: 10%;
     background: rgb(255,225,254);
@@ -627,19 +631,69 @@
         background-color: $color__enseignants-nuit;
         color: $color__enseignants-texte;
     }
+    & .enseignants:hover{
+        box-shadow:
+                2px 2px $color__footer-fond3_nuit,
+                3px 3px $color__footer-fond3_nuit,
+                4px 4px $color__footer-fond3_nuit;
+    
+        background-color: $color__footer-fond_nuit;
+    
+    }
     & .InfoEnseignants{
-        background: $color__enseignants-nuit;
+        background: $color--enseignants-fond;
 
         p{
             color: $color__enseignants-texte;
         }
         
+        img{
+            box-shadow: -5px -5px 30px 5px $color__enseignants-nuit, 5px 5px 30px 5px $color__enseignants-texte;
+        }
+
+        .bouton-fermeture{
+           
+            background-color: $color__footer-fond2_nuit;
+            color: white;
+            
+            
+        }
     }
+    & .nomProf{
+            color: $color__enseignants-texte;
+        }
+    & .InfoEnseignants .bouton-fermeture:hover{
+
+        box-shadow: 0 10px 20px $color__footer-fond3_nuit;
+    }   
+    & .EnseignantsScroll::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px $color__footer-fond2_nuit;
+      
+    }
+    & .EnseignantsScroll::-webkit-scrollbar-thumb {
+      background: $color__footer-fond2_nuit;
+      
+    }
+    & .InfoEnseignants .DescriptionEnseignant::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px $color__footer-fond2_nuit;
+        
+      }
+    
+    & .InfoEnseignants .DescriptionEnseignant::-webkit-scrollbar-thumb {
+        background: $color__footer-fond2_nuit;
+       
+      }
+    
 
     
 }
 
-/*.shape{
+.AnimationBulle{
+    position: absolute;
+    //z-index: -1;
+}
+
+.shape{
     position: absolute;
     background: linear-gradient(45deg, #efbfff 0%, #97afff 100%);
     animation: morph 8s ease-in-out infinite;
@@ -649,7 +703,7 @@
     width: 550px;
     margin-top: -350px;
     margin-left: -60px;
-    z-index: 5;
+    z-index: -1;
 }
 
 @keyframes morph {
@@ -667,4 +721,4 @@
           border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
           background: linear-gradient(45deg, #efbfff 0%, #97afff 100%);
       } 
-  }*/
+  }
