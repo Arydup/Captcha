@@ -34,10 +34,24 @@
 	?> 	
 	<section class='cours affiche-cours <?php echo $class ?>'>
 	<div class="entry-content">
-	<?php 
-	the_title( '<h2><i class="fas fa-video"></i><span>', '</span> </h2>');
+	
+	<h2> 
+	<?php switch(get_field('type_de_cours')){
+		case 'jeu': '<i class="fas fa-gamepad"></i>'; break;
+		case 'web': echo'<i class="fab fa-internet-explorer"></i>'; break;
+		case 'specifique': '<i class="fas fa-book"></i>'; break;
+		case 'video': echo '<i class="fas fa-video"></i>'; break;
+		case 'design': '<i class="fas fa-paint-brush"></i>'; break;
+		case '3d': '<i class="fas fa-cube"></i>'; break;
+		default : echo '<i class="fas fa-video"></i>' ;
+	} 
+	the_title( '<span>', '</span>');
+	?>
+	</h2>
+	<?php
 	the_content();
 	 ?>
+
 	</div><!-- .entry-content -->
 	<?php if(has_post_thumbnail()): ?>
 	    <figure>
