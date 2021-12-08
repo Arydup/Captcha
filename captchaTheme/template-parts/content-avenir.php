@@ -22,14 +22,15 @@
 </article>
 
 <br>
+<hr class="lignePage">
 <br>
-<h3>Perspectives universitaires</h3>
-<article class="avenirPartie" >
 
+<article class="avenirPartie" >
     <section class="avenirPhoto">
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/UQAT_campusRouyn-Noranada.jpg" alt="">
     </section>
 <section class="avenirTexte">
+<h3>Perspectives universitaires</h3>
 <!-- <div class="wp-block-column" style="flex-basis:66.66%"> -->
 <p><a href="https://www.uqat.ca/etudes/creation-et-nouveaux-medias/baccalaureat-en-creation-numerique-profils-informatique-cinema-creation-3d-technologie-web/">DEC-BAC en création numérique – concentration Cinéma, Création 3D ou Technologie Web à l’UQAT (Rouyn-Noranda)</a></p>
 <br>
@@ -47,9 +48,9 @@ spécialiser dans le domaine de la création cinématographique, de la création
 de la technologie Web.</p>
 </section>
 </article>
-
-
-
+<br>
+<hr class="lignePage">
+<br>
 <article class="avenirPartie" >
 
     <section class="avenirPhoto">
@@ -76,7 +77,9 @@ l’étudiant une spécialisation de son choix comme le design narratif, le desi
 pédagogique, le design d’interfaces pour utilisateurs, l’intelligence artificielle, etc. </p>
 </section>
 </article>
-
+<br>
+<hr class="lignePage">
+<br>
 <article class="avenirPartie" >
 
     <section class="avenirPhoto">
@@ -89,7 +92,9 @@ pédagogique, le design d’interfaces pour utilisateurs, l’intelligence artif
 <p>Ce programme a pour objectif de former des intervenants compétents dans le domaine des communications médiatiques. Plus spécifiquement : former des spécialistes en interactivité et des concepteurs en nouveaux médias. On recherche des individus créatifs, débrouillards, et articulés, prêts à s'inscrire dans les exigences d'innovation continuelle du média et à participer à son évolution.</p>
 </section>
 </article>
-
+<br>
+<hr class="lignePage">
+<br>
 <article class="avenirPartie" >
 
     <section class="avenirPhoto">

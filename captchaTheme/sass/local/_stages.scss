@@ -1,9 +1,42 @@
 .stagePartie{
     display:grid;
     grid-template-columns: 1fr 2fr;
-    padding: 0px 58px;
+    padding: 0px 200px;
 }
 
 .stageTexte{
     z-index: 2;
+}
+
+.stagePhoto{
+    margin: 0 auto;
+}
+
+.stagePhoto img{
+    width: 401px;
+object-fit: cover;
+}
+@media screen and (max-width:1600px){
+    .stageTexte{
+        margin-left: 15px;
+    }
+    }
+
+@media screen and (max-width:1456px){
+    .stagePartie{
+        padding: 0px 100px;
+    }
+    }
+    @media screen and (max-width:810px){
+        .stagePartie{
+            padding: 0px 50px;
+        }
+        }
+@media screen and (max-width:428px){
+.stagePartie{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 1fr;
+    padding: 0;
+    margin: 0 15px;
+}
 }
