@@ -129,7 +129,7 @@
         }
     }
 
-    .entry-content {
+    .text {
         padding: 10px;
         //font-size: 12px;
         //font-family: Asap&family;
@@ -154,12 +154,12 @@
     }
 
 
-    figure {
+   figure {
         display : flex;
         flex-direction: column;
-        padding-top: 10;
+        padding-top: 30px;
         padding-right: 20px;
-    a{
+   a{
         //font-weight: bold;
         font-size: 15px;
         padding-top: 10px;
@@ -175,7 +175,7 @@
     width: 200px;
     height: 200px;
 }
-.entry-content{
+.text {
     justify-content: center;
    
 }
@@ -199,7 +199,7 @@
     border: dashed 3px black;
     box-shadow: 5px 5px 20px  rgb(135, 206, 250);
     //box-shadow: 5px 5px 5px;
-    height: 1100px;
+    height: 1200px;
 }
 
 
@@ -274,12 +274,16 @@
         display: flex;
     }
     .session a {
-        display: block;
+        display: flex;
+        flex-wrap: nowrap;
         width: 90%;
         font-size: 30px;
         padding: 5px 10px;
         margin: 5px 68px;
         //background-color:$color__footer-fond;
+        i{
+            padding: 10px;
+        }
     }
     .session_cours{
         display: flex;
@@ -291,7 +295,7 @@
            
        }
 
-     .entry-content{
+     .text{
         display: block;
         padding: 5px 10px;
         margin: 5px 68px;
@@ -300,35 +304,39 @@
         flex : 1 0 50%;
 
         h2{
-            font-size: 25px;
+            //font-size: 100px;
              color: white;
              text-shadow: 5px 2px 8px black;
             }
         }
         p{
             text-align: justify;
-             font-size: 15px;
+             font-size: 16px;
+             padding-top: 10px;
              color: white;
             text-shadow: 2px 2px 2px black;
        }
 
-       figure {
+      figure {
             display : flex;
             flex-direction: column;
             padding-top: 40px;
             padding-right: 50px;
             }
-    a{
+       a       {
     font-weight: bold;
     font-size: 20px;
     padding-left: 10px;
     text-shadow: 2px 2px 2px black;      
     }
 
+    .cours h2 span{
+        font-size: 30px;
+    }
     .cours img {
         margin: 10px;
-        width: 500px;
-        height: 700px;
+       // width: 300px;
+       // height: 400px;
     }
     .affiche-cours{
         display: flex;
@@ -340,7 +348,7 @@
         border: dashed 3px black;
         box-shadow: 5px 5px 20px  rgb(135, 206, 250);
         //box-shadow: 5px 5px 5px;
-        height: 500px;
+        height: 600px;
     }
     
   }
