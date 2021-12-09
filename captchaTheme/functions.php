@@ -143,12 +143,16 @@ function captcha_scripts() {
 	wp_enqueue_style( 'under-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
 	wp_style_add_data( 'under-style', 'rtl', 'replace' );
-
+	
 	wp_enqueue_script( 'under-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'modeSombre', get_template_directory_uri() . '/js/modeSombre.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'enseignants',get_template_directory_uri() . '/js/enseignants.js', array(), _S_VERSION, true );
+	
 	if(is_category('projet')){
 		wp_enqueue_script( 'projets',get_template_directory_uri() . '/js/projets.js', array(), _S_VERSION, true );
+		wp_enqueue_script( 'scroll', get_template_directory_uri() . '/js/scroll.js', array(), _S_VERSION, true );
+	}
+	if(is_category('enseignants')){
+		wp_enqueue_script( 'enseignants',get_template_directory_uri() . '/js/enseignants.js', array(), _S_VERSION, true );
 	}	
 	wp_enqueue_script( 'grilledecours',get_template_directory_uri() . '/js/grilledecours.js', array(), _S_VERSION, true );
   
