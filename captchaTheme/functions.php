@@ -147,6 +147,7 @@ function captcha_scripts() {
 	wp_enqueue_script( 'under-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'modeSombre', get_template_directory_uri() . '/js/modeSombre.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'enseignants',get_template_directory_uri() . '/js/enseignants.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'vie',get_template_directory_uri() . '/js/vie.js', array(), _S_VERSION, true );
 	if(is_category('projet')){
 		wp_enqueue_script( 'projets',get_template_directory_uri() . '/js/projets.js', array(), _S_VERSION, true );
 	}	

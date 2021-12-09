@@ -6,9 +6,20 @@
 
 .avenirTexte{
     margin: 0px 0px 0px 15px;
+    font-size: 10.5pt;
 }
 .avenirTexte p{
     line-height: 23pt;
+    font-size: 10.5pt;
+}
+
+.darkmode--activated{
+    .avenirTexte{
+        color: $color--enseignants-texte;
+    }
+    .avenirTexte p{
+        color:$color--enseignants-texte;
+    }
 }
 
 // Responsive

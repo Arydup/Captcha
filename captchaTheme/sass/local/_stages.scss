@@ -6,9 +6,11 @@
 
 .stageTexte{
     z-index: 2;
+    font-size: 10.5pt;
 }
 .stageTexte p{
     line-height: 23pt;
+    font-size: 10.5pt;
 }
 .stagePhoto{
     margin: 0 auto;
@@ -18,9 +20,18 @@
     width: 401px;
 object-fit: cover;
 }
+
+.darkmode--activated{
+    .stageTexte{
+        color: $color--enseignants-texte;
+    }
+    .stageTexte p{
+        color: $color--enseignants-texte;
+    }
+}
 @media screen and (max-width:1600px){
     .stageTexte{
-        margin-left: 15px;
+        margin-left: 30px;
     }
     }
 
@@ -36,5 +47,8 @@ object-fit: cover;
     grid-template-rows: 0fr 1fr;
     padding: 0;
     margin: 0 15px;
+}
+.stageTexte p{
+    line-height: revert;
 }
 }
