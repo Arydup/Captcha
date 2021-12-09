@@ -1,6 +1,4 @@
-
-
-
+<!-- Galerie de photos -->
 <article class="galerieArticle">
 <div class="galeriePhoto">
     <img id="image1" src="http://eddym11.sg-host.com/wp-content/uploads/2021/11/50291306_10155703710312373_212636503610753024_n.jpg" onclick="laPhoto()" alt="">
@@ -17,7 +15,7 @@
 
 
 <script>
-
+// Fonctions définies pour chaque photo: Si on clique sur l'une d'entre elles, elle s'affichera en plus grand
 function laPhoto(){
     document.getElementById("imageClick").style.display = "inherit";
 
@@ -60,12 +58,9 @@ document.getElementById("imgAffiche").innerHTML = '<img  src="http://eddym11.sg-
 
 document.getElementById("imgAffiche").innerHTML = '<img  src="http://eddym11.sg-host.com/wp-content/uploads/2021/11/48424727_10155658032642373_7408415923826065408_o-1024x771.jpg" onclick="laPhoto9()" alt="">';
 }
-
+//On clique sur le fond pour ne plus afficher l'image
 function leFond(){
-    // var uneImage = document.getElementById("image");
-    // if (uneImage !== null) {
-    //     uneImage.style.display = "none";
-    // }
+
     document.getElementById("imageClick").style.display = "none";
 
 }

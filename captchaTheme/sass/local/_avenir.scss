@@ -7,23 +7,24 @@
 .avenirTexte{
     margin: 0px 0px 0px 15px;
 }
+.avenirTexte p{
+    line-height: 23pt;
+}
 
+// Responsive
 @media screen and (max-width:1456px){
     .avenirPartie{
-        padding: 0px 8vw;
+       margin: 0px 8vw;
     }
     }
-    @media screen and (max-width:810px){
-        .avenirPartie{
-            margin: 0px 7vw;
-        }
-        }
-
-@media screen and (max-width:700px){
+@media screen and (max-width:810px){
     .avenirPartie{
         grid-template-columns: 1fr;
-        grid-template-rows: 0fr 1fr;
+        grid-template-rows: 0fr auto;
         padding: 0;
         margin: 0 15px;
+    }
+    .avenirTexte{
+        margin: 0;
     }
     }

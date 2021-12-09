@@ -1,4 +1,4 @@
-<!-- Image à afficher pour la page vie étudiante  -->
+<!-- Image à afficher en grand pour la page vie étudiante  -->
 <div id="imageClick" style="display: none;">
     <div class="fond" onclick="leFond()">
 

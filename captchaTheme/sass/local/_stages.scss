@@ -7,7 +7,9 @@
 .stageTexte{
     z-index: 2;
 }
-
+.stageTexte p{
+    line-height: 23pt;
+}
 .stagePhoto{
     margin: 0 auto;
 }
@@ -27,12 +29,8 @@ object-fit: cover;
         padding: 0px 100px;
     }
     }
-    @media screen and (max-width:810px){
-        .stagePartie{
-            padding: 0px 50px;
-        }
-        }
-@media screen and (max-width:428px){
+    
+@media screen and (max-width:1000px){
 .stagePartie{
     grid-template-columns: 1fr;
     grid-template-rows: 0fr 1fr;
