@@ -63,7 +63,7 @@
 	<?php else : ?>	
 		<figure>
 			<img width="300" height="198" src="http://localhost/captcha/wp-content/uploads/2021/10/a20c5321f8d456e310e20063ae7d93a5.jpg" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy">	
-			<a href="http://localhost:81/Captcha/projets">Voir plus de projets</a>
+			<a href="https://eddym11.sg-host.com/category/projet/">Voir plus de projets</a>
 			</figcaption>
 		</figure>
 	<?php endif ?>
