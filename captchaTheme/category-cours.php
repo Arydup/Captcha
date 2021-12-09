@@ -30,7 +30,7 @@ get_header();
 
 			<hr class="ligne"> </hr>
 
-			<nav class='session_cours'> <!-- Sous menu des sessions -->
+			<nav class=' affiche-types-cours session_cours'> <!-- Sous menu des sessions -->
 				<a href="#" class='tous'>Tous</a>
 				<a href="#" class='2D-3D-video'>2D/3D/Video</a>
 				<a href="#"class='web'>Web</a>

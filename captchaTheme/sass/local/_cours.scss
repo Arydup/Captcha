@@ -64,7 +64,7 @@
     text-shadow: black 2px 2px; 
 }
 .session_cours a:hover{
-    background-color: rgb(135, 206, 250);
+    background-color: $color__footer-texte_nuit;
 }
 .session_cours a:active{
     background-color: black;

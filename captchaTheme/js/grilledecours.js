@@ -8,7 +8,6 @@
          // console.log(btn.className);
           affiche_cours(btn.className);
         })
-    
     }
 function affiche_cours(typecours){
         console.log(typecours);
@@ -31,4 +30,3 @@ function affiche_cours(typecours){
     }
 }
 
-//------------------------------------Btnsession-------------------
