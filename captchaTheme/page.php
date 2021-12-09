@@ -1,3 +1,11 @@
+<!-- Image à afficher en grand pour la page vie étudiante  -->
+<div id="imageClick" style="display: none;">
+    <div class="fond" onclick="leFond()">
+
+<div id="imgAffiche"></div>
+
+</div>
+</div>
 <?php
 /**
  * The template for displaying all pages
@@ -13,6 +21,7 @@
  */
 
 get_header();
+
 ?>
 
 <main id="primary" class="site-main">

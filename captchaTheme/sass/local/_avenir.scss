@@ -1,11 +1,30 @@
 .avenirPartie{
     display:grid;
     grid-template-columns: 1fr 2fr;
-    margin: 0px 15px;
+    margin: 0px 13vw;
 }
-.avenirPartie h3{
-    margin: 0px 0px 0px 15px;
-}
+
 .avenirTexte{
     margin: 0px 0px 0px 15px;
 }
+.avenirTexte p{
+    line-height: 23pt;
+}
+
+// Responsive
+@media screen and (max-width:1456px){
+    .avenirPartie{
+       margin: 0px 8vw;
+    }
+    }
+@media screen and (max-width:810px){
+    .avenirPartie{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr auto;
+        padding: 0;
+        margin: 0 15px;
+    }
+    .avenirTexte{
+        margin: 0;
+    }
+    }
