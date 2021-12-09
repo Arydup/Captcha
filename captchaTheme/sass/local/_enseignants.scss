@@ -5,7 +5,8 @@
 /*******************************************************************************
  * CSS POUR LE CONTENEUR DE TOUTES LES CARTES ENSEIGANTS.
  ******************************************************************************/
-.EnseignantsScroll{
+
+ .EnseignantsScroll{
   
     display: flex;
     justify-content: space-between;
@@ -13,8 +14,29 @@
     overflow-y: scroll;
     overflow-x: hidden;
     height: 60vh;
-    margin-right: 75px;
-    gap: 20px 20px;    
+    width: 95vw;
+    gap: 20px 20px;
+    
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to bottom, rgba(27, 3, 3, 0), #E8F0FF 80%);
+        height: 15%;
+        width: 130%;
+      }
+    &:before{
+        content: "";
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-image: linear-gradient(to top, rgba(27, 3, 3, 0), #E8F0FF 80%);
+        height: 15%;
+        width: 100%;
+      }
 }
 
 /*******************************************************************************
@@ -41,28 +63,25 @@
   /*******************************************************************************
  * CSS POUR CHAQUE CARTE ENSEIGNANTS
  ******************************************************************************/
-  .EnseignantsGlobal{
-      margin-right: 170px;
-  }
-
 .enseignants{
     background-color:rgb(255,225,254);
-    width: 170%;
-    height: 100%;
+    width: 300px;
+    height: 150px;
     display: flex;
     flex-direction: row;
-    margin-left: 50px;
+    margin-left: 40px;
     border-radius: 25%;
     
 
     & img{
         display: block;
-        width: 40%;
-        height: 80%;
+        width: 170px;
+        height: 135px;
         border-radius: 30%;
-        margin-top: 10px;
         margin-left: 20px;
         margin-right: 20px;
+        margin-top: 10px;
+        object-fit: cover;
     }
 
 }
@@ -232,6 +251,15 @@
     /*******************************************************************************
  * CSS POUR CHAQUE CARTES QUI MONTRE PLUS D'INFO SUR LES ENSEIGNANTS.
  ******************************************************************************/
+ .enseignants{
+    width: 300px;
+    height: 200px;
+    & img{
+        width: 180px;
+        height: 140px;
+    }
+
+}
 
 .InfoEnseignants{
     height: 65vh;
@@ -265,9 +293,8 @@
 }
 
 .enseignants h3{
-    margin-top: 75px;
-    margin-left: 50px;
-    font-size: 1.5em;
+    margin-top: 30px;
+    font-size: 1em;
 }
 
  /*******************************************************************************
@@ -390,26 +417,16 @@
     padding-bottom: 30px;
     
     &:after {
-        content: "";
-        position: absolute;
-        z-index: 1;
         right: 0;
-        bottom: 0;
-        pointer-events: none;
         background-image: linear-gradient(to right, rgba(27, 3, 3, 0), #E8F0FF 80%);
         height: 130%;
         width: 15%;
       }
     &:before{
-        content: "";
-        position: absolute;
-        z-index: 1;
-        bottom: 0;
         left: 0;
-        pointer-events: none;
         background-image: linear-gradient(to left, rgba(27, 3, 3, 0), #E8F0FF 80%);
-        height: 130%;
         width: 15%;
+        height: 130%;
       }
     
     
@@ -560,10 +577,10 @@
  ******************************************************************************/
 .darkmode--activated{
     .EnseignantsScroll::after{
-            background-image: linear-gradient(to right, rgba(27, 3, 3, 0), #3b15c4 80%);
+            background-image: linear-gradient(to bottom, rgba(27, 3, 3, 0), #3b15c4 80%);
           }
     .EnseignantsScroll::before{
-        background-image: linear-gradient(to left, rgba(27, 3, 3, 0), #3b15c4 80%);
+        background-image: linear-gradient(to top, rgba(27, 3, 3, 0), #3b15c4 80%);
       }
     & .enseignants{
         background-color: $color__enseignants-nuit;
@@ -622,26 +639,40 @@
        
       }
     
+      @include bureau{
+
+    .EnseignantsScroll:after {
+        
+        background-image: linear-gradient(to right, rgba(27, 3, 3, 0), #3b15c4 80%);
+        
+      }.EnseignantsScroll:before{
+            background-image: linear-gradient(to left, rgba(27, 3, 3, 0), #3b15c4 80%);
+          }
+        
+        
+    }
 
     
 }
 
+  /*******************************************************************************
+     * CSS POUR LES ANIMATIONS BULLES
+     ******************************************************************************/
 .AnimationBulle{
     position: absolute;
-    //z-index: -1;
+    z-index: 1;
 }
-
+/*
 .shape{
     position: absolute;
     background: linear-gradient(45deg, #efbfff 0%, #97afff 100%);
     animation: morph 8s ease-in-out infinite;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    height: 400px;
+    height: 200px;
     transition: all 1s ease-in-out;
-    width: 550px;
-    margin-top: -350px;
-    margin-left: -60px;
-    z-index: -1;
+    width: 200px;
+    margin-top: -200px;
+    margin-left: 250px;
 }
 
 @keyframes morph {
@@ -660,3 +691,4 @@
           background: linear-gradient(45deg, #efbfff 0%, #97afff 100%);
       } 
   }
+*/

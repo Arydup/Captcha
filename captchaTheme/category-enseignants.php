@@ -53,7 +53,7 @@ get_header();
 			</div>
 			<section class="AnimationBulle">
 			<div class="shape"></div>
-			</section>
+			
 			
 
 			<?php
