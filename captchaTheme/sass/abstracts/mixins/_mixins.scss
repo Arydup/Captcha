@@ -12,6 +12,11 @@
 
 $desktop__accueil : 800px;
 $desktop__tablette : 600px;
+$desktop__laptop:1456px;
+$desktop__ipadM:810px;
+$desktop__ecrL:1600px;
+$desktop__entre2:1000px;
+$desktop__iPhone12Pro:428px;
 
 @mixin bureau{
 	@media (min-width : #{$desktop__accueil}){
@@ -21,6 +26,33 @@ $desktop__tablette : 600px;
 
 @mixin tablette{
 	@media (min-width : #{$desktop__tablette}){
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (max-width:$desktop__laptop){
+		@content;
+	}
+}
+
+@mixin iPadMax{
+	@media (max-width:$desktop__ipadM){
+		@content;
+	}
+}
+@mixin ecrLarge {
+	@media (max-width:$desktop__ecrL){
+		@content;
+	}
+}
+@mixin entre2 {
+	@media (max-width:$desktop__entre2){
+		@content;
+	}
+}
+@mixin iPhone12 {
+	@media (max-width:$desktop__iPhone12Pro){
 		@content;
 	}
 }

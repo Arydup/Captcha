@@ -23,7 +23,7 @@ div.galeriePhoto img{
     margin: auto 7vw;
 }
 .fond{
-    background: rgba(0, 0, 0, 0.7);
+    background: $color__vie_fond;
     position: fixed;
     z-index:4;
     width: 100%;
@@ -37,7 +37,7 @@ div.galeriePhoto img{
 
 }
 // Affichage adaptatif
-@media screen and (max-width:428px){
+@include iPhone12{
     div.galeriePhoto{
         display: grid;
         grid-template-columns: 1fr 1fr ;

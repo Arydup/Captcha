@@ -12,7 +12,7 @@
     line-height: 23pt;
     font-size: 10.5pt;
 }
-
+//Couleur du texte pour le mode sombre
 .darkmode--activated{
     .avenirTexte{
         color: $color--enseignants-texte;
@@ -23,12 +23,12 @@
 }
 
 // Responsive
-@media screen and (max-width:1456px){
+@include laptop{
     .avenirPartie{
        margin: 0px 8vw;
     }
     }
-@media screen and (max-width:810px){
+@include iPadMax{
     .avenirPartie{
         grid-template-columns: 1fr;
         grid-template-rows: 0fr auto;

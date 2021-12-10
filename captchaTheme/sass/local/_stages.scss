@@ -29,19 +29,19 @@ object-fit: cover;
         color: $color--enseignants-texte;
     }
 }
-@media screen and (max-width:1600px){
+@include ecrLarge{
     .stageTexte{
         margin-left: 30px;
     }
     }
 
-@media screen and (max-width:1456px){
+@include laptop{
     .stagePartie{
         padding: 0px 100px;
     }
     }
     
-@media screen and (max-width:1000px){
+@include entre2{
 .stagePartie{
     grid-template-columns: 1fr;
     grid-template-rows: 0fr 1fr;
