@@ -20,21 +20,22 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			<nav class='session'>		<!-- Menu des sessions -->
-				<a href="#"><i class="fas fa-caret-right"></i>Session&nbsp;1</a>
-				<a href="#">Session&nbsp;2</a>
-				<a href="#">Session&nbsp;3</a>
-				<a href="#">Session&nbsp;4</a>
-				<a href="#">Session&nbsp;5</a>
-				<a href="#">Session&nbsp;6</a>
+				<a id="sessions" href="#"><i class="fas fa-caret-right"></i>Toutes les sessions&nbsp;</a>
+				<a id="session_1" title="session 1" href="#">1</a>
+				<a id="session_2" title="session 2"href="#">2</a>
+				<a id="session_3" title="session 3"href="#">3</a>
+				<a id="session_4" title="session 4"href="#">4</a>
+				<a id="session_5" title="session 5"href="#">5</a>
+				<a id="session_6" title="session 6"href="#">6</a>
 			</nav>
 
 			<hr class="ligne"> </hr>
 
-			<nav class=' affiche-types-cours session_cours'> <!-- Sous menu des sessions -->
+			<nav class='session_cours'> <!-- Sous menu des sessions -->
 				<a href="#" class='tous'>Tous</a>
 				<a href="#" class='2D-3D-video'>2D/3D/Video</a>
 				<a href="#"class='web'>Web</a>
-				­<!--<a href="#">Vidéo</a>-->
+				<!--<a href="#">Vidéo</a>-->
 				<a href="#"class='jeu'>Jeu</a>
 				<a href="#"class='specifique'>Spécifique</a>
 			</nav>

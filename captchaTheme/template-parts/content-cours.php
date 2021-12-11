@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Template part for displaying page content in page.php
@@ -19,7 +20,7 @@
 	
 
 
-	­­<?php
+<?php
 	$typeCar = substr(get_the_title(),5,1);
 	switch($typeCar){
 		case 'J': $class = 'jeu'; break;
@@ -72,4 +73,3 @@
 
 
 	</section>
-

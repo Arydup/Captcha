@@ -155,6 +155,7 @@ function captcha_scripts() {
 		wp_enqueue_script( 'enseignants',get_template_directory_uri() . '/js/enseignants.js', array(), _S_VERSION, true );
 	}	
 	wp_enqueue_script( 'grilledecours',get_template_directory_uri() . '/js/grilledecours.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'grilledecoursSession',get_template_directory_uri() . '/js/grilledecoursSession.js', array(), _S_VERSION, true );
   
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -201,10 +202,10 @@ function extraire_article_accueil($query) {
 add_action( "pre_get_posts", "extraire_article_accueil" );
 */
 function extraire_article_cours($query) {
-    if(  !is_admin() && $query->is_category('10') && $query->is_main_query() ) {
+    if(  !is_admin() && $query->is_category('7') && $query->is_main_query() ) {
         //$query->set('meta_key', 'ordre');
         //$query->set('orderby', array('meta_value' => "ASC"));
-		$query->set('orderby', array('title' => "ASC"));
+		$query->set('orderby', array('title(4,5)' => "ASC"));
         $query->set('post_per_page', -1);
     }  
 }
