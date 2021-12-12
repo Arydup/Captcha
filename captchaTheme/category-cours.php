@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main categoryCours">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -63,7 +63,6 @@ get_header();
 
 		endif;
 		?>
-	
 
 	</main><!-- #main -->
 
