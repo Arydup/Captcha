@@ -20,7 +20,7 @@ get_header();
 			
 			</header><!-- .page-header -->
 			
-			
+			<div class="content">
 			<section class='EnseignantsScroll'>
 			
 			
@@ -50,10 +50,10 @@ get_header();
 			
 			
 			</section>
-			
+			</div>
 			<section class="AnimationBulle">
 			<div class="shape"></div>
-			</section>
+			
 			
 
 			<?php
