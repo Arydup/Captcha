@@ -47,6 +47,7 @@ get_header();
 
 			endwhile;?>
 			</div>
+			<a href="#" class="boutonRetourHaut">Retour vers le haut ↑</a>
 			<?php
 		endif;
 		?>

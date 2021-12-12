@@ -223,7 +223,7 @@
 /*-------------IMAGES----------------------*/
 .cours figure img{
 
-    box-shadow: 1px 10px 15px black;
+    //box-shadow: 1px 10px 15px black;
 }
 .cours figure a
 {
@@ -300,7 +300,7 @@
     color: rgb(213, 209, 216);
     text-shadow: black 2px 2px;
 }
-.darkmode--activated .site-main{
+.darkmode--activated .cours .site-main{
     background-color: #3b15c4; 
 }
 

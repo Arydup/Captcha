@@ -29,7 +29,7 @@ $image = get_field('logo_du_logiciel');
 			<img class="imageLogo" src="http://eddym11.sg-host.com/wp-content/uploads/2021/09/cat.jpg" alt="logo par défaut" />
 		<?php endif; ?>
 		<p>Créé par: <?php echo get_field('auteur');?></p>
-		<p class="descriptionProjet"><?php echo get_field('description_du_projet');?></p>
+		<p class="descriptionProjet"><?php echo couper_string(get_field('description_du_projet'), 180);?></p>
 		<p class="typeCoursProjet"><?php echo get_field('type_de_cours');?></p>
 	</section>
 </article><!-- #post-<?php //the_ID(); ?> -->
@@ -44,7 +44,7 @@ $image = get_field('logo_du_logiciel');
 				<div class="zoomSectionImage">
 					<div class="flechePrecedante"></div>
 					<?php if(has_post_thumbnail()):
-						echo the_post_thumbnail('medium');
+						echo the_post_thumbnail();
 					else : 
 					?>
 					<img src="http://eddym11.sg-host.com/wp-content/uploads/2021/09/cat.jpg" alt="logo par défaut" />
