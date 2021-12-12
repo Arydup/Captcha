@@ -5,6 +5,7 @@
 
 
 /*-------------NAVIGATION SESSION----------------------*/
+
 .session {                       /*-------------Navigation session----------------------*/         
     display: grid;
     justify-content: center;
@@ -112,6 +113,10 @@
    // }
 
 /*-------------TEXTE DES COURS----------------------*/
+.categoryCours{
+    padding-top: 100px;
+    background-color: $color__fond_pale;
+
 
 .cours {
     line-height: 2em;
@@ -172,7 +177,7 @@
         flex-direction: column;
         padding-top: 10;
         padding-right: 20px;
-    a{
+        a{
         //font-weight: bold;
         font-size: 15px;
         padding-top: 10px;
@@ -183,7 +188,7 @@
     }
 }
 
-.cours img {
+img {
     margin: 10px;
     width: 200px;
     height: 200px;
@@ -232,6 +237,8 @@
    //-webkit-text-stroke-width: 0.2px;
     //-webkit-text-stroke-color: black;
     //text-shadow: 5px 5px 8px black;
+}
+
 }
 /*------------------------------mode nuit---------------------------------*/
 .darkmode--activated .affiche-cours{
@@ -294,6 +301,9 @@
     border-left: solid 2px white; 
     
 }
+.darkmode--activated .categoryCours{
+    background-color: $color__fond__fonce;
+}
 .darkmode--activated .session_cours a{
 
     font-family: concert one, cursive;
@@ -340,21 +350,22 @@
              color: white;
              text-shadow: 5px 2px 8px black;
             }
-        }
+        
         p{
             text-align: justify;
              font-size: 15px;
              color: white;
             //text-shadow: 2px 2px 2px black;
        }
+    }
 
-       figure {
+       .cours figure {
             display : flex;
             flex-direction: column;
             padding-top: 40px;
             padding-right: 50px;
             }
-    a{
+    .cours a{
     font-weight: bold;
     font-size: 20px;
     padding-left: 10px;
