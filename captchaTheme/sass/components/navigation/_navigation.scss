@@ -94,6 +94,7 @@
 	}
 
 	a {
+		transition: color .5s;
 		display: block;
 		text-decoration: none;
 		color: $color__nav-link;
@@ -110,6 +111,7 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 		color: $color__page_active;
+		text-decoration: underline;
 	}
 }
 

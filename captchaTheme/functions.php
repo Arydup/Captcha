@@ -206,6 +206,18 @@ function extraire_article_cours($query) {
 }
 add_action( "pre_get_posts", "extraire_article_cours" );
 
+if (!function_exists('couper_string')) {
+	function couper_string($str, $len) {
+		if (strlen($str) < $len)
+			return $str;
+	
+		$str = substr($str,0,$len);
+		if ($spc_pos = strrpos($str," "))
+				$str = substr($str,0,$spc_pos);
+	
+		return $str . "<br>Lire la suite...";
+	}   
+}
 /*
 function cookies_auteurProjet($nomAuteur) {  
 	$auteurProjet = $nomAuteur;  

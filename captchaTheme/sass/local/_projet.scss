@@ -3,40 +3,46 @@
  * Modification de la page projet
  ******************************************************************************/
 .pageProjet{
+    padding-top: 50px;
     background-color: $color__fond_pale;
     @include bureau{
         display: grid;
-    grid-template-columns: 155px auto;
+        grid-template-columns: 155px auto;
+        padding-top: 100px;
     }
 }
-.site{//A optimiser
-    //display: block;
+.boutonRetourHaut{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 165px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: $color__nav;
+    border-radius: 30px;
+    padding: 6px 0px;
+
+    @include bureau{
+        grid-row: 2;
+        grid-column: 2;
+        margin-top: 100px;
+    }
 }
+
 .projet{
    padding: 10px;
    width: 100%;
-   //margin: 1em;
-   //margin: 2px;
-   //display: flex;
-   //flex-direction: column;
-   //align-items: center;
-   //justify-content: center;
-   //border: 1px solid black;
-   border-radius: 5px;
-   //width: 300px;
-   //height: 200px;
+   border-radius: 20px;
    display: inline-grid;
-   //gap : 5px;
-   //grid-template-rows: 50% 1fr 1fr 1fr 1fr ;
    grid-template-columns: 80% 1fr ;
-
    img:first-child{
        border-radius: 5px;
        display: block;
        margin: 5% auto;
        width: 90%;
-       height: auto;
+       height: 180px;
        grid-column: 1/3;
+       object-fit: cover;
    }
    .imageLogo{
        display: block;
@@ -55,18 +61,15 @@
 
    @include tablette{
        grid-template-columns: 30% 60% 10%;
-
+        &:first-child{
+            align-items: center;
+        }
        .imageLogo{
            grid-row: 1/3;
            grid-column: 3/4;
        }
-       //flex-direction: row;
-       //align-items: flex-start;
-       //justify-content: flex-start;
        img:first-child{
-           //height: 100%;
-           //padding-right: 10px;
-           object-fit: contain;
+           object-fit: cover;
            width: 100%;
            grid-row: 1/5;
            grid-column: 1;
@@ -86,8 +89,11 @@
 
    @include bureau{
        width: 300px;
-       //margin: 0 5px;
+       height: 500px;
        grid-template-columns: 80% 1fr ;
+       &:first-child{
+        align-items: flex-start;
+        }
 
        .imageLogo{
            grid-row: 2/4;
@@ -96,7 +102,7 @@
  
        img:first-child{
            width: 90%;
-           height: auto;
+           height: 160px;
            grid-column: 1/3;
            grid-row: 1;
        }
@@ -105,7 +111,7 @@
        }
        .typeCoursProjet{
            grid-column: 1;
-           align-self:flex-start;
+           align-self:flex-end;
            text-align: left;
        }
        p, h3{
@@ -216,6 +222,9 @@
         width: 90%;
     }
    @include bureau{
+       article{
+        margin: 0;
+       }
         grid-column: 2;
        display: flex;
        flex-wrap: wrap;
@@ -321,6 +330,8 @@ Sélecteurs pour les boîtes de projet
             img{
                 width: 50%;
                 max-width: 675px;
+                max-height: 550px;
+                object-fit: contain;
             }
         }
         .flechePrecedante{
@@ -372,17 +383,12 @@ Sélecteurs pour les boîtes de projet
                     content: "\a";
                     white-space: pre;
                 }
-                p{
+                p, a{
                     margin: 2vw;
+                    display: block;
                 }
             }
         }
-        /*
-        @include tablette{
-            width: 90vw;
-            height: 95vh;
-            border-radius: 100px;
-        }*/
     }
     
 }
@@ -410,7 +416,10 @@ Sélecteurs pour les media queries sur un ordinateur
 Sélecteurs pour le mode sombre
 ----------------------------------------------------------------------------- */
 .darkmode--activated{
-    & .ctrl-chiffre{
+    .boutonRetourHaut{
+        background-color: $color__footer-fond2_nuit;
+    }
+    .ctrl-chiffre{
         a {
             color: white;
             background-color: $color__projet-bouttons_nuit;
@@ -419,7 +428,7 @@ Sélecteurs pour le mode sombre
     .pageProjet{
             background-color: $color__fond__fonce;
 
-            p, h3, h1,h2, label, .flechePrecedante, .flecheSuivante{
+            p, h3, h1,h2, label, .flechePrecedante, .flecheSuivante, a{
                 color: $color__footer-texte_nuit;
             }
             article{
