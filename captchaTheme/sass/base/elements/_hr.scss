@@ -4,3 +4,13 @@ hr {
 	height: 1px;
 	margin-bottom: 1.5em;
 }
+// Lignes pointillées bleues
+hr.lignePage{
+	border-style: dashed;
+border-width: 6px;
+border-top: 0px;
+width: 80%;
+margin: 10px auto;
+background-color: inherit;
+color: deepskyblue;
+ }

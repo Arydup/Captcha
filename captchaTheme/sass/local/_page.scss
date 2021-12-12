@@ -18,11 +18,12 @@ body{
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 99vh;
+    min-height: 100%;
     background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond2-1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 .home .site, .accueil{
     background-image: url("http://eddym11.sg-host.com/wp-content/uploads/2021/11/fond_jour.png"); 

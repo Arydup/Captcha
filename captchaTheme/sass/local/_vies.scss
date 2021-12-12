@@ -1,0 +1,75 @@
+    div.galeriePhoto{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        margin: auto auto;
+        justify-content: center;
+        row-gap: 10px;
+ }
+    .galerieArticle{
+        overflow-x:none;
+        white-space: wrap;
+        margin-bottom: 50px;
+        z-index: 1;
+        position: inherit;
+        margin: auto 7vw;
+    }
+
+    div.galeriePhoto img{
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        margin: auto auto;
+        width: 139px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: 134px;
+    }
+
+    .site-main-vies{
+        padding-top: 100px;
+        background-color: $color__fond_pale;
+        }
+
+// Affichage adaptatif
+    @include bureau{
+        div.galeriePhoto{
+            display: grid;
+            grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+            grid-template-rows: 0.5fr 0.5fr;
+            width: 170%;
+            height: 450px;
+        }
+        
+        div.galeriePhoto img{
+            display: inline-block;
+            margin: auto auto;
+            width: 70%;
+            object-fit: cover;
+            height: 203px;
+        
+        }
+        .galerieArticle{
+            overflow-x: scroll;
+            white-space: nowrap;
+            margin-bottom: 50px;
+            z-index: 1;
+            position: inherit;
+            margin: auto 7vw;
+        }
+        .fond{
+            background: $color__vie_fond;
+            position: fixed;
+            z-index:4;
+            width: 100%;
+            height: 100%;
+            margin:auto auto;
+            display: flex;
+        }
+        #imgAffiche{
+            margin: auto auto;
+        
+        
+        }
+        }
