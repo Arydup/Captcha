@@ -1,34 +1,6 @@
-.avenirPartie{
-    display:grid;
-    grid-template-columns: 1fr 2fr;
-    margin: 0px 13vw;
-}
-
-.avenirTexte{
-    margin: 0px 0px 0px 15px;
-    font-size: 10.5pt;
-}
-.avenirTexte p{
-    line-height: 23pt;
-    font-size: 10.5pt;
-}
-//Couleur du texte pour le mode sombre
-.darkmode--activated{
-    .avenirTexte{
-        color: $color--enseignants-texte;
-    }
-    .avenirTexte p{
-        color:$color--enseignants-texte;
-    }
-}
 
 // Responsive
-@include laptop{
-    .avenirPartie{
-       margin: 0px 8vw;
-    }
-    }
-@include iPadMax{
+
     .avenirPartie{
         grid-template-columns: 1fr;
         grid-template-rows: 0fr auto;
@@ -38,4 +10,32 @@
     .avenirTexte{
         margin: 0;
     }
-    }
+
+    @include bureau{
+        .avenirPhoto{
+            min-width: 250px;
+        }
+        .avenirPartie{
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+            margin: 0px 13vw;
+        }
+        
+        .avenirTexte{
+            margin: 0px 0px 0px 15px;
+            font-size: 10.5pt;
+        }
+        .avenirTexte p{
+            line-height: 23pt;
+            font-size: 10.5pt;
+        }
+        //Couleur du texte pour le mode sombre
+        .darkmode--activated{
+            .avenirTexte{
+                color: $color--enseignants-texte;
+            }
+            .avenirTexte p{
+                color:$color--enseignants-texte;
+            }
+        }
+        }

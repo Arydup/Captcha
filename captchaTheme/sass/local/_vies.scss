@@ -1,43 +1,3 @@
-div.galeriePhoto{
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-    grid-template-rows: 0.5fr 0.5fr;
-    width: 170%;
-    height: 450px;
-}
-
-div.galeriePhoto img{
-    display: inline-block;
-    margin: auto auto;
-    width: 70%;
-    object-fit: cover;
-    height: 203px;
-
-}
-.galerieArticle{
-    overflow-x: scroll;
-    white-space: nowrap;
-    margin-bottom: 50px;
-    z-index: 1;
-    position: inherit;
-    margin: auto 7vw;
-}
-.fond{
-    background: $color__vie_fond;
-    position: fixed;
-    z-index:4;
-    width: 100%;
-    height: 100%;
-    margin:auto auto;
-    display: flex;
-}
-#imgAffiche{
-    margin: auto auto;
-
-
-}
-// Affichage adaptatif
-@include iPhone12{
     div.galeriePhoto{
         display: grid;
         grid-template-columns: 1fr 1fr ;
@@ -66,4 +26,45 @@ div.galeriePhoto img{
         object-fit: cover;
         height: 134px;
     }
-}
+
+// Affichage adaptatif
+    @include bureau{
+        div.galeriePhoto{
+            display: grid;
+            grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+            grid-template-rows: 0.5fr 0.5fr;
+            width: 170%;
+            height: 450px;
+        }
+        
+        div.galeriePhoto img{
+            display: inline-block;
+            margin: auto auto;
+            width: 70%;
+            object-fit: cover;
+            height: 203px;
+        
+        }
+        .galerieArticle{
+            overflow-x: scroll;
+            white-space: nowrap;
+            margin-bottom: 50px;
+            z-index: 1;
+            position: inherit;
+            margin: auto 7vw;
+        }
+        .fond{
+            background: $color__vie_fond;
+            position: fixed;
+            z-index:4;
+            width: 100%;
+            height: 100%;
+            margin:auto auto;
+            display: flex;
+        }
+        #imgAffiche{
+            margin: auto auto;
+        
+        
+        }
+        }

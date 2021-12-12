@@ -20,17 +20,17 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			<nav class='session'>		<!-- Menu des sessions -->
-				<a href="#"><i class="fas fa-caret-right"></i>Session 1</a>
-				<a href="#">Session 2</a>
-				<a href="#">Session 3</a>
-				<a href="#">Session 4</a>
-				<a href="#">Session 5</a>
-				<a href="#">Session 6</a>
+				<a href="#"><i class="fas fa-caret-right"></i>Session&nbsp;1</a>
+				<a href="#">Session&nbsp;2</a>
+				<a href="#">Session&nbsp;3</a>
+				<a href="#">Session&nbsp;4</a>
+				<a href="#">Session&nbsp;5</a>
+				<a href="#">Session&nbsp;6</a>
 			</nav>
 
 			<hr class="ligne"> </hr>
 
-			<nav class='session_cours'> <!-- Sous menu des sessions -->
+			<nav class=' affiche-types-cours session_cours'> <!-- Sous menu des sessions -->
 				<a href="#" class='tous'>Tous</a>
 				<a href="#" class='2D-3D-video'>2D/3D/Video</a>
 				<a href="#"class='web'>Web</a>

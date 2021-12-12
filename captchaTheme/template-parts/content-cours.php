@@ -33,7 +33,7 @@
 	//echo $class;
 	?> 	
 	<section class='cours affiche-cours <?php echo $class ?>'>
-	<div class="entry-content">
+	<div class="text">
 	
 	<h2> 
 	<?php switch(get_field('type_de_cours')){
