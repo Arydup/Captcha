@@ -1,0 +1,252 @@
+.main-navigation {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+
+	ul {
+		font-family: 'Concert One', cursive;
+		text-align: center;
+		display: flex;
+		font-size: 1.3em;
+
+		justify-content: flex-start;
+		align-items: center;
+		background-color: $color__nav;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		overflow-x: auto;
+		white-space: nowrap;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		@include bureau{
+			width: 100vw;
+			-webkit-overflow-scrolling: auto;
+			-ms-overflow-style: none;
+			justify-content: space-around;
+		}
+
+		&::-webkit-scrollbar{
+			//display: flex;
+			background-color: $color__nav-scrollbar;
+			height: 7px;
+			//position: absolute;
+			//display: none;
+		}
+		&::-webkit-scrollbar-thumb{
+			//max-height: 10px;
+			background-color: $color__nav-scrollbar-thumb;
+			-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07); }
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				padding: 14px;
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+				text-decoration: none;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+		display: inline-block;
+		padding: 14px;
+		//padding: 10px 5%;
+		text-decoration: none;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		transition: color .5s;
+		display: block;
+		text-decoration: none;
+		color: $color__nav-link;
+		
+	}
+	a:hover {
+		color: $color__nav-link-hover;
+		text-shadow: 2px 1px 0px $color__nav-link-hover-shadow;
+	}
+
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__page_active;
+		text-decoration: underline;
+	}
+}
+
+/* Pour la navigation de l'accueil */
+
+
+
+/* Small menu. */
+/*.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}*/
+
+/*@media screen and (min-width: 37.5em) {*/
+
+.menu-toggle {
+	display: none;
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+
+.modeJourNuit{
+	background-color: $color__modeJourNuit-fond;
+	padding: 0px 2px;
+	border-radius: 25px;
+}
+
+/*Le toggle du mode sombre*/
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+	margin: 0;
+}
+.modeSombre-checkbox{
+	position: absolute;
+	visibility: hidden;
+}
+/*
+.transition{
+	transition: left 0.25s;
+}*/
+.modeSombreToggle{
+    display: inline-block;
+    background: rgb(226, 223, 223);
+    border-radius: 16px;
+    width: 48px;
+    height: 22px;
+    position: relative;
+    vertical-align: middle;
+    //transition: left 0.25s;
+    top: -2px;
+
+	&::before{
+		/*L'icone du soleil*/
+		font-family: "Font Awesome 5 Free"; 
+		font-weight: 900;
+		content: "\f185";
+		font-size: 0.9rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $color__nav;
+		border-radius: 50%;
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		//transition: left 0.25s;
+		transition: var(--transitionTemps);
+	}
+}
+
+.modeSombre{
+	cursor: pointer;
+	display: inline-block;
+	padding-left: 20px;
+}
+.modeSombre-checkbox:checked + .modeSombreToggle {
+    background: #4c4b52;
+}
+.modeSombre-checkbox:checked + .modeSombreToggle:before {
+    left: 28px;
+	content: "\f186";
+	font-size: 0.7rem;
+	color: rgb(157, 148, 160);
+}
+/*Les couleurs du darkMode*/
+
+.darkmode--activated{
+    & .main-navigation{ 	
+		& ul{
+			background-color: $color__nav_nuit;
+			&::-webkit-scrollbar{
+				background-color: $color__nav-scrollbar_nuit;        
+			}
+			&::-webkit-scrollbar-thumb{
+				background-color: $color__nav-scrollbar-thumb_nuit;        
+			}			
+    	}
+		& a{
+			color: $color__nav-link_nuit;			
+		}
+		& a:hover{
+			color: $color__nav-link-hover_nuit;
+			text-shadow: 2px 1px 0px $color__nav-link-hover-shadow_nuit;
+		}
+		& .current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+			color: $color__page_active_nuit;
+		}
+	}
+	& .modeSombreToggle::before{
+		background-color: $color__nav_nuit;
+	}
+}
