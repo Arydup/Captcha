@@ -1,11 +1,11 @@
 <!-- Image à afficher en grand pour la page vie étudiante  -->
-<div id="imageClick" style="display: none;">
+<!-- <div id="imageClick" style="display: none;">
     <div class="fond" onclick="leFond()">
 
 <div id="imgAffiche"></div>
 
 </div>
-</div>
+</div> -->
 <?php
 /**
  * The template for displaying all pages
@@ -22,6 +22,13 @@
 
 get_header();
 ?>
+<div id="imageClick" style="display: none;">
+    <div class="fond" onclick="leFond()">
+
+<div id="imgAffiche"></div>
+
+</div>
+</div>
 	<?php if(get_the_title()==="Accueil" || is_front_page()):?>
 		<div class="ligneAccueil"></div>
 		<div class="ligneAccueil"></div>
