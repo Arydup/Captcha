@@ -13,7 +13,7 @@
             stage consiste à travailler pour une entreprise dans le domaine du multimédia. Pendant toute la durée du
             stage, le/la stagiaire est encadré par un professionnel de l’entreprise.</p>
         <br>
-        <p>Les objectifs du stage seront :</p>
+        <!-- <p>Les objectifs du stage seront :</p>
         <ul>
             <li>de parfaire la formation du stagiaire (volet apprentissage); </li>
             <li>de mettre en pratique les connaissances acquises lors de la formation (volet production);</li>
@@ -22,7 +22,7 @@
             <li>de mettre le stagiaire en contact avec les contraintes d’un milieu de travail réel;</li>
             <li>de permettre au stagiaire de consolider ses compétences en matière de travail d’équipe;</li>
             <li>d’amener le stagiaire à produire un résultat de qualité dans un délai raisonnable.</li>
-        </ul>
+        </ul> -->
         <!-- Citation -->
         <p><i>J’ai beaucoup apprécié mon stage en intégration web, j’ai développé un site WordPress entier et j’ai
                 appris à mieux coder. Ce stage m’a été très bénéfique, j’ai pu aiguiser mes connaissances en
