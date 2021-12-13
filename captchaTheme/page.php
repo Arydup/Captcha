@@ -14,7 +14,12 @@
 
 get_header();
 ?>
-
+	<?php if(get_the_title()==="Accueil" || is_front_page()):?>
+		<div class="ligneAccueil"></div>
+		<div class="ligneAccueil"></div>
+		<div class="billeAccueil"></div>
+		<div class="billeAccueil"></div>
+	<?php endif; ?>
 	<main id="primary" class="site-main">
 
 		<?php
