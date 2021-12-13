@@ -10,7 +10,7 @@ Sélecteurs pour la barre de navigation
 		font-family: 'Concert One', cursive;
 		text-align: center;
 		display: flex;
-		font-size: 1.3em;
+		font-size: 1.2em;
 
 		justify-content: flex-start;
 		align-items: center;
@@ -23,12 +23,21 @@ Sélecteurs pour la barre de navigation
 		margin: 0;
 		padding-left: 0;
 
+		@include tablette{
+		
+			font-size: 1.3em;
+		}
+
 		@include bureau{
 			width: 100vw;
 			-webkit-overflow-scrolling: auto;
 			-ms-overflow-style: none;
 			justify-content: space-around;
+
+			font-size: 1.4em;
 		}
+
+	
 
 		&::-webkit-scrollbar{
 			background-color: $color__nav-scrollbar;
