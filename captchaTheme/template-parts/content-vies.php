@@ -31,3 +31,9 @@
     </div>
 </article>
     </div>
+    <style>
+
+        main.site-main{
+        background-color: #e8f0ff;
+        }
+    </style>

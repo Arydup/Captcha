@@ -47,6 +47,7 @@ get_header();
 					get_template_part( 'template-parts/content', 'stages' );
 				elseif(get_the_title()==="Avenir"):
 					get_template_part( 'template-parts/content', 'avenir' );
+					
 				elseif(get_the_title()==="Vie étudiante"):
 					get_template_part( 'template-parts/content', 'vies' );
 			else :

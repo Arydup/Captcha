@@ -64,5 +64,10 @@
 </article>
 <br>
 <!-- Marge pour que le footer ne masque pas le texte -->
-<div style="margin-bottom: 50px;"></div>
 </div>
+<style>
+
+main.site-main{
+padding-bottom:0px;
+}
+</style>
