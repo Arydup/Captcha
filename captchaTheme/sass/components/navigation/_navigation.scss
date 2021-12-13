@@ -1,3 +1,6 @@
+/* -----------------------------------------------------------------------------
+Sélecteurs pour la barre de navigation
+----------------------------------------------------------------------------- */
 .main-navigation {
 	display: block;
 	width: 100%;
@@ -28,14 +31,10 @@
 		}
 
 		&::-webkit-scrollbar{
-			//display: flex;
 			background-color: $color__nav-scrollbar;
 			height: 7px;
-			//position: absolute;
-			//display: none;
 		}
 		&::-webkit-scrollbar-thumb{
-			//max-height: 10px;
 			background-color: $color__nav-scrollbar-thumb;
 			-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07); }
 
@@ -65,14 +64,6 @@
 				width: 200px;
 				text-decoration: none;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
 		li:hover > ul,
@@ -85,12 +76,7 @@
 		position: relative;
 		display: inline-block;
 		padding: 14px;
-		//padding: 10px 5%;
 		text-decoration: none;
-
-		&:hover > a,
-		&.focus > a {
-		}
 	}
 
 	a {
@@ -114,18 +100,6 @@
 		text-decoration: underline;
 	}
 }
-
-/* Pour la navigation de l'accueil */
-
-
-
-/* Small menu. */
-/*.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}*/
-
-/*@media screen and (min-width: 37.5em) {*/
 
 .menu-toggle {
 	display: none;
@@ -169,10 +143,7 @@ input[type="checkbox"], input[type="radio"] {
 	position: absolute;
 	visibility: hidden;
 }
-/*
-.transition{
-	transition: left 0.25s;
-}*/
+
 .modeSombreToggle{
     display: inline-block;
     background: rgb(226, 223, 223);
@@ -181,11 +152,9 @@ input[type="checkbox"], input[type="radio"] {
     height: 22px;
     position: relative;
     vertical-align: middle;
-    //transition: left 0.25s;
     top: -2px;
 
 	&::before{
-		/*L'icone du soleil*/
 		font-family: "Font Awesome 5 Free"; 
 		font-weight: 900;
 		content: "\f185";
@@ -200,7 +169,6 @@ input[type="checkbox"], input[type="radio"] {
 		position: absolute;
 		top: 2px;
 		left: 2px;
-		//transition: left 0.25s;
 		transition: var(--transitionTemps);
 	}
 }
