@@ -205,7 +205,7 @@ function extraire_article_cours($query) {
     if(  !is_admin() && $query->is_category('7') && $query->is_main_query() ) {
         //$query->set('meta_key', 'ordre');
         //$query->set('orderby', array('meta_value' => "ASC"));
-		$query->set('orderby', array('title(4,5)' => "ASC"));
+		$query->set('orderby', array('title (4,5)' => "ASC"));
         $query->set('post_per_page', -1);
     }  
 }

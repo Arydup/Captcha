@@ -20,7 +20,7 @@ let btn_session = document.querySelectorAll(".session a");
          let no_session= tous_les_cours[k].querySelector("span").innerHTML.substring(4,5)
          console.log("no_session="+no_session)
          console.log(k)
-        if (choix_session==no_session)
+        if (choix_session==no_session || choix_session==0) 
         {
             tous_les_cours[k].classList.add("affiche-cours");
             } 
