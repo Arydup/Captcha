@@ -1,3 +1,9 @@
+<!-- Image à afficher en grand pour la page vie étudiante  -->
+<!-- <div id="imageClick" style="display: none;">
+    <div class="fond" onclick="leFond()">
+<div id="imgAffiche"></div>
+</div>
+</div> -->
 <?php
 /**
  * The template for displaying all pages
@@ -14,6 +20,13 @@
 
 get_header();
 ?>
+<div id="imageClick" style="display: none;">
+    <div class="fond" onclick="leFond()">
+
+<div id="imgAffiche"></div>
+
+</div>
+</div>
 	<?php if(get_the_title()==="Accueil" || is_front_page()):?>
 		<div class="ligneAccueil"></div>
 		<div class="ligneAccueil"></div>
@@ -28,7 +41,12 @@ get_header();
 
 			if(get_the_title()==="Accueil"):
 				get_template_part( 'template-parts/content', 'accueil' );
-			
+				elseif(get_the_title()==="Stages"):
+					get_template_part( 'template-parts/content', 'stages' );
+				elseif(get_the_title()==="Avenir"):
+					get_template_part( 'template-parts/content', 'avenir' );
+				elseif(get_the_title()==="Vie étudiante"):
+					get_template_part( 'template-parts/content', 'vies' );
 			else :
 				get_template_part( 'template-parts/content', 'page' );
 			endif;
