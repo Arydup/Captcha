@@ -156,6 +156,7 @@ function captcha_scripts() {
 	}	
 	wp_enqueue_script( 'grilledecours',get_template_directory_uri() . '/js/grilledecours.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'grilledecoursSession',get_template_directory_uri() . '/js/grilledecoursSession.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'vie',get_template_directory_uri() . '/js/vie.js', array(), _S_VERSION, true );
   
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
