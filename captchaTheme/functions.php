@@ -141,6 +141,10 @@ add_action( 'widgets_init', 'under_widgets_init' );
  */
 function captcha_scripts() {
 	wp_enqueue_style( 'under-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'Concert one', 'https://fonts.googleapis.com/css2?family=Concert+One&display=swap', array(), '1.0' );
+	wp_enqueue_style( 'asap', 'https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,400&display=swap', array(), '1.0' );
+	wp_enqueue_style( 'Lobster two', 'https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap', array(), '1.0' );
+	
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
 	wp_style_add_data( 'under-style', 'rtl', 'replace' );
 	
@@ -191,21 +195,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/*
-function extraire_article_accueil($query) {
-    if(  !is_admin() && $query->is_front_page() && $query->is_main_query() ) {
-        $query->set('category_name','accueil');
-        $query->set('meta_key', 'ordre');
-        $query->set('orderby', array('meta_value' => "ASC"));
-        $query->set('post_per_page', -1);
-    }  
-}
-add_action( "pre_get_posts", "extraire_article_accueil" );
-*/
 function extraire_article_cours($query) {
     if(  !is_admin() && $query->is_category('7') && $query->is_main_query() ) {
-        //$query->set('meta_key', 'ordre');
-        //$query->set('orderby', array('meta_value' => "ASC"));
 		$query->set('orderby', array('title (4,5)' => "ASC"));
         $query->set('post_per_page', -1);
     }  
@@ -224,24 +215,3 @@ if (!function_exists('couper_string')) {
 		return $str . "<br>Lire la suite...";
 	}   
 }
-/*
-function cookies_auteurProjet($nomAuteur) {  
-	$auteurProjet = $nomAuteur;  
-	if(!isset($_COOKIE[$auteurProjet])) {
-	setcookie('auteurProjet', $auteurProjet, time()+86400); 
-	}
-}
-
-function get_cookie($auteurProjet) { 
-	if(isset($_COOKIE['auteurProjet'])) {
-	function placeholder() {
-	}
-	}
-}*/
-/*
-function cookies_auteurProjet() {  
-	$auteurProjet = '';  
-	if(!isset($_COOKIE[$auteurProjet])) {
-	setcookie('auteurProjet', $auteurProjet, time()+86400); 
-	}
-}*/
