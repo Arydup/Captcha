@@ -1,11 +1,8 @@
-
-
 const boutonFerme = document.querySelectorAll('.bouton-fermeture');
 const InfoEnseignants = document.querySelectorAll(".InfoEnseignants");
 const  Boutenseignants = document.querySelectorAll(".enseignants");
 const carteInfo = document.querySelectorAll(".carteInfo");
-  console.log('MIAOU');
-console.log(carteInfo);
+
 for (let i = 0; i < boutonFerme.length; i++) {
 boutonFerme[i].addEventListener("click", function() {
   InfoEnseignants[i].style.opacity = 0;
