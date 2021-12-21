@@ -20,7 +20,7 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			<nav class='session'>		<!-- Menu des sessions -->
-				<a id="sessions" href="#"><i class="fas fa-caret-right"></i>Toutes les sessions&nbsp;</a>
+				<a id="session_0" href="#"><i class="fas fa-caret-right"></i>Toutes les sessions&nbsp;</a>
 				<a id="session_1" title="session 1" href="#">1</a>
 				<a id="session_2" title="session 2"href="#">2</a>
 				<a id="session_3" title="session 3"href="#">3</a>
