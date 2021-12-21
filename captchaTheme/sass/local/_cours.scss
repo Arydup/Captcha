@@ -16,12 +16,12 @@
     a{
         justify-content:space-around;
         left: 100px;
-        border: red solid 2px;
+        //border: red solid 2px;
     }
     
     a:hover{
         background-color: rgb(135, 206, 250);
-        //border-radius: 100px;
+        border-radius: 10px;
     }
     a:active{
         background-color: black;
@@ -133,7 +133,7 @@
     background-color: rgb(207, 233, 250);
     height: 0;
     opacity: 0;
-    transition: all vertical 1s;
+    transition: opacity 2s;
 
     h2 {
         display: flex;
@@ -187,7 +187,7 @@
             font-size: 18px;
             color: black;
             text-size-adjust: 50%;
-            padding: 10px;
+            //padding: 10px;
 
             //text-shadow: 2px 2px 2px black;
         }
@@ -205,7 +205,7 @@
         //font-weight: bold;
         font-size: 15px;
        // padding-top: 10px;
-        padding-left: 50px;
+        //padding-left: 50px;
         //padding-right: 10px;
         //text-shadow: 2px 2px 2px black;
      }
@@ -213,11 +213,11 @@
 }
 
 img {
-    margin-right: 230px;
-    margin-top: 100px;
-    margin-left: 50px;
-    width: 200px;
-    height: 200px;
+    margin-right: 120px;
+    margin-top: 20px;
+    //margin-left: 50px;
+    width: 100px;
+    height: 100px;
 }
 .entry-content{
     justify-content: center;
@@ -236,17 +236,17 @@ img {
 
 .affiche-cours{
     display: flex;
-    opacity: 1;
     margin-left: 30px;
     margin-right: 30px;
     background-image: linear-gradient(180deg,$color__footer-texte_nuit,$color__projet-gratient2,white);
     //background-color: $color__footer-texte_nuit;
-    border: dashed 3px black;
+    //border: dashed 3px black;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 20px  rgb(135, 206, 250);
     //box-shadow: 5px 5px 5px;
     //height: 500px;
+    opacity: 1;
     height: auto;
 }
 .no_session{
@@ -412,6 +412,7 @@ img {
         margin: 10px;
         width: 300px;
         height: 300px;
+        border-radius: 10px;
     }
     .affiche-cours{
         display: flex;
@@ -420,7 +421,7 @@ img {
         margin-left: 30px;
         margin-right: 30px;
         //background-color: $color__footer-texte_nuit;
-        border: dashed 3px black;
+        //border: dashed 3px black;
         box-shadow: 5px 5px 20px  rgb(135, 206, 250);
         //box-shadow: 5px 5px 5px;
         height: 500px;
